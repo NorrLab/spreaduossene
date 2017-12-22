@@ -1,0 +1,76 @@
+{	
+	"page":{
+		"top":"D&eacute;but de page",
+		"missions":"Missions",
+		"skills":"Comp&Eacute;tences techniques",
+		"jobs_studies":"Exp&Eacute;riences & Formations",
+		"job_experiences":"EXPERIENCES PROFESSIONNELLES",
+		"study_experiences":"FORMATIONS",
+		"myCv":{
+			"tns":"INGENIEUR SOFTWAR",
+			"open":"STAGIAIRE INGENIEUR SOFTWAR",
+			"study":{
+				"aston":"",
+				"uvch1":"MASTER II INGENIERIE DES SYSTEMES DE COMMUNICATION",
+				"uvch2":"MASTER I INGENIERIE DES SYSTEMES DE COMMUNICATION",
+				"uvch3":"LICENCE GENIE ELECTRIQUE INFORMATIQUE INDUSTRIELLE",
+				"wroclaw":"FORMATION LANGUE POLONAISE",
+				"city":{
+					"uvch":"Universit&eacute; de Valenciennes",
+					"wroclaw":"Universit&eacute; polytechnique de Wroclaw"
+				}
+			}
+		},
+		"login":{
+			"getAccount":"Vous n'avez pas encore de compte&nbsp;?",
+			"accountCreate":"cr&eacute;ez votre compte",
+			"login":"CONNEXION",
+			"validate":"valider"
+		},
+		"register":{
+			"title":"CR&Eacute;ER UN COMPTE",
+			"name":"nom",
+			"lastName":"pr&eacute;nom",
+			"company":"entreprise",
+			"confirm":"confirmer password"
+		}
+	},
+	"webSite":"Ulrich OSSENE&nbsp;|&nbsp;Sciences et Philosophie",
+	"comments":{
+		"avis":"Avis",
+		"uosTitle":" Ing&eacute;nieur Syst&egrave;mes de Communication",
+		"uosComments":"C'est en 2004 que j'obtiens mon baccalaur&eacute;at S, tr&egrave;s vite j'ai enchain&eacute; des petits boulots, c'est ainsi que j'ai travaill&eacute; comme technicien de surface, ma&ccedil;on, plongeur dans un restaurant, agent de s&eacute;curit&eacute;. En 2008, alors que je me rendais sur mon lieu de travail situ&eacute; &agrave; Ramatuelle dans le Sud-Est de la France, o&ugrave; je travaillais comme agent de  s&eacute;curit&eacute;, l&agrave;, sur la route, j'ai le d&eacute;clique..."
+	},
+	"missions":{
+		"sncf":{
+			"post":"Assistant Ouvrage d'Art",
+			"duration" : "9 mois",
+			"description1":"",
+			"description2":"",
+			"description3":"",
+			"description4":""
+		},
+		"open":{
+			"post":"Stagiaire Ing&eacute;nieur Software J2EE ",
+			"duration" : "1 mois",
+			"description":""
+		},
+		"abw":{
+			"post":"Ing&eacute;nieur Software J2EE ",
+			"duration" : "1 an 2 mois",
+			"description1":"Chez abw, j'int&egrave;gre une &eacute;quipe de 15 personnes travaillant sur un portail web de suivi de consommations.",
+			"description2":"Dans un premier temps ma mission consiste &agrave; corriger les bugs en prenant en compte la logique m&eacute;tier,&agrave; am&eacute;liorer la qualit&eacute; du code avec des outils comme",
+			"description3": "puis &agrave; d&eacute;velopper des fonctionnalit&eacute;s nouvelles. Frameworks",
+			"description4" : " Une base de donn&eacute;es"
+		},
+		"coe":{
+			"post":"Ing&eacute;nieur Software J2EE ",
+			"duration" : "en cours",
+			"description1":"",
+			"description2":"",
+			"description3":"",
+			"description4":""
+		}
+	}
+}
+

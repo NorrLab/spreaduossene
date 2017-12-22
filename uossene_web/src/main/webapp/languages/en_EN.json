@@ -1,0 +1,68 @@
+{	
+	"page":{
+		"top":"Page top",
+		"missions":"Missions",
+		"skills":"Competences & Skills",
+		"jobs_studies":"Jobs & Studies",
+		"job_experiences":"PROFESSIONAL EXPERIENCES",
+		"study_experiences":"STUDIES",
+		"myCv":{
+			"tns":"SOFTWAR INGENEER ",
+			"open":"SOFTWAR INGENEER INTERN",
+			"study":{
+				"aston":"CONCEPTOR-DEVELOPPER Java JEE",
+				"uvch1":"MASTER DEGREE II COMMUNICATION SYSTEME INGENEERING",
+				"uvch2":"MASTER DEGREE I COMMUNICATION SYSTEME INGENIERING",
+				"uvch3":"BACHELOR ELECTRICAL ENGINEERING AND INDUSTRIAL COMPUTING",
+				"wroclaw":"POLISH LANGUAGE",
+				"city":{
+					"uvch":"University of Valenciennes",
+					"wroclaw":"Wroclaw University of Science and Technology"
+				}
+			}
+		},
+		"login":{
+			"getAccount":"Stil don't have an account ?",
+			"accountCreate":"create account",
+			"login":"LOGIN",
+			"validate":"send"
+		},
+		"register":{
+			"title":"ACCOUNT CREATION",
+			"name":"name",
+			"lastName":"lastname",
+			"company":"company",
+			"confirm":"confirm password"
+		}
+	},
+	"webSite":"Ulrich OSSENE&nbsp;|&nbsp;Sciences and Philosophy",
+	"comments":{
+		"avis":"Avis",
+		"uosTitle":" Communication System Engeneer",
+		"uosComments":"In 2004, just after graduating from highschool I started odd jobs. I worked as cleaner, then as a bricklayer's mate,  I cleant dishes in restaurant in Saint-Raphel, I was a securityy guard. Then One day, while I was walking to job, located in Ramatuelle in South-East of France, things fall into place "},
+	"missions":{
+		"sncf":{
+			"post":"Assistant Ouvrage d'Art",
+			"duration" : "9 months",
+			"description":""
+		},
+		"open":{
+			"post":"Software Ingeneer Intern J2EE",
+			"duration" : "1 month",
+			"description":""
+		},
+		"abw":{
+			"post":"Software Ingeneer J2EE ",
+			"duration" : "1 year 2 months",
+			"description1":"Chez abw, j'int&egrave;gre une &eacute;quipe de 15 personnes travaillant sur un portail web de suivi de consommations.",
+			"description2":"Dans un premier temps ma mission consiste &agrave; corriger les bugs en prenant en compte la logique m&eacute;tier,&agrave; am&eacute;liorer la qualit&eacute; du code avec des outils comme",
+			"description3": "puis &agrave; d&eacute;velopper des fonctionnalit&eacute;s nouvelles. Frameworks",
+			"description4" : " Une base de donn&eacute;es"
+		},
+		"coe":{
+			"post":"Software Ingeneer J2EE ",
+			"duration" : "in progress",
+			"description":""
+		}
+	}
+}

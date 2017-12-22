@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html  ng-app="uosApp">
+	<head>
+<!-- 		<title>Ulrich OSSENE&nbsp;|&nbsp;Sciences et Philosophie</title> -->
+		<title translate>webSite</title>
+		<meta charset="utf-8" name="description"
+		content="Transformer votre vie en transformant votre fa�on de penser vous, de 
+		penser le monde autour de vous. Savoir interpr&eacute;ter chauque m&eacute;ssage que la vie vous transmet tous jours, et r&eacute;aliser sa mission sur terre.">
+		<meta name="keywords" content="ossene,ulrich,richesse, succèes personnel,
+		pensée positive,réussir sa vie,développeur java,j2ee,structured query languaque,
+		sql,postgres,systèmes de communication,angular,conseil de l'europe,council of europe,
+		">
+		<link rel='shortcut icon' type='image/x-icon' href='img/onlinelogomaker-091817-0002-6247.png' />
+		<link rel="stylesheet" href="css/angular-material/angular-material.min.css">
+		<link rel="stylesheet" href="css/angular-material/doc.css">
+		<link rel="stylesheet" href="css/app/user.css">
+		<link rel="stylesheet" href="js/libs/angular-ui-tree/dist/angular-ui-tree.css">
+		<link rel="stylesheet" href="css/app/app.css">
+		<script src="js/libs/jQuery/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/jQuery/jquery.waypoints.js"></script>
+		<script type="text/javascript" src="js/basic_js/prefixfree1_0_7.min.js"></script>
+	</head>
+	<body ng-controller="UosCtrl">
+		<md-toolbar style="background: #000;color:#fff; position:fixed; z-index:999"  
+		
+		class="large__nav site-content-toolbar _md _md-toolbar-transitions hide">
+
+	      <div  >   
+	         <div  layout="row" style="height: 73px;">
+		   	 	
+	   	 		<div layout-margin layout="row" ng-show="detectDevice()"  flex="10">
+	   	 			<div class="device_menu" ng-click="openOuterMenu()">
+						<div></div>
+						<div></div>
+						<div></div>
+	   	 			</div> 
+		  		</div> 
+		  		<div ng-show="detectDevice()" flex="80"  layout="row" layout-align="center center"
+						class="menu_midle">
+		  			<p><span class="ulrich_u">U</span> <span class="ossene_o">OS</span></p>
+		  		</div>
+					  		
+		  		<div flex="10" layout-margin layout="row" >
+					<img   ng-click="goToHome()" src="img/uosssene_logo.png"  class="home_not_working">
+	   	 		</div> 
+				<div Layout="row"       layout-align="center center" ng-hide="detectDevice()" flex="90">
+								<ul layout-align="center center"  id="inner_nav_links" class="tresor">
+									<li class="li_sign"  >
+										<span data-scroll="the_mission"  class="tx_button miss">
+								       		 <b translate>page.missions</b> 
+								       	</span>
+							       	</li>
+									
+									<li class="li_sign"  >
+										<span  class="tx_button comp" ng-click="toCompetences()" >
+								       		 <b translate>page.skills</b> 
+								       	</span>
+							       	</li>
+									
+									<li class="li_sign expe"   >
+										<span class="tx_button" ng-click="gotoMyCv()" >
+								       		<b translate>page.jobs_studies</b>
+								       	</span>
+									</li>
+									
+									<li class="li_sign vide"  >
+								       		<span ng-click="haveAccess()" class="tx_button" >
+								       			<b>Videos</b>
+								       		</span>
+									</li>
+									<li class="li_sign cont"  >
+										<span  class="tx_button" ng-click="contact()">
+								       		 <b>CONTACT</b>
+								       	</span>
+									</li>
+									<li layout="row" class="icon-Globe_USA_outer"  style="margin-top: 24px">
+					       		  		<div  layout="colum">
+						       		  		<b ng-click="changeLanguage(language)">{{language}}</b> 
+						       		  	</div>
+									</li>
+								</ul>
+							</div>
+	  		</div>
+	  		<md-card class="sub_menu_card" ng-hide="outMenuClicked()">
+						<div class="sub_menu outer_col" layout="column" layout-align="center stretch" >	
+								<ul >
+									<li  data-scroll="the_mission" > 
+										<span class="tx_button miss">
+									       		 <b translate>page.missions</b> 
+									       	</span>
+									</li>
+									<li ng-click="toCompetences()" > 
+										<span  class="tx_button comp" >
+									       		 <b translate>page.skills</b> 
+									       	</span>
+									</li>
+									<li ng-click="gotoMyCv()"> 
+										<span class="tx_button"  >
+									       		<b translate>page.jobs_studies</b>
+								       	</span>
+									</li>
+									<li ng-click="haveAccess()"> 
+										<span  class="tx_button" >
+							       			<b>Videos</b>
+							       		</span>
+									</li>
+									<li ng-click="contact()">
+										<span  class="tx_button" >
+								       		 <b>CONTACT</b>
+								       	</span>
+									</li>
+								</ul>
+						</div>
+					</md-card>
+	  		</div>
+	    </md-toolbar>
+		
+	
+    <md-content layout="column"   flex class="big-contaier  _md layout-column">
+    	<div class="docs-ng-view layout-padding" id="ctn_top">
+			<div class="main__container" ><!-- ng-controller="UosCtrl" -->
+					<md-card  class="inner__nav home_nave"  felx="100">
+						<div layout="row" >	
+				   	 		<div layout="row"  ng-show="detectDevice()"  flex="10">
+								<div  ng-click="clickMenu()" class="device_menu_in">	
+									<a layout="row" " id="nav-toggle"><span></span></a>
+								</div>
+					  		</div> 
+					  		<div ng-show="detectDevice()"  flex="90"  layout="row" layout-align="center center"
+ 								class="menu_midle">
+					  			<p>UOS</p>
+					  		</div>
+					  		<div flex="10"  layout="row" layout-align="center center">
+								<img   ng-click="goToHome()" src="img/uosssene_logo.png"  class="home_not_working" style="height: 60px;">
+	   	 					</div>
+							<div Layout="row"       layout-align="center center" ng-hide="detectDevice()" flex="90">
+								<ul layout-align="center center"  id="inner_nav_links" class="tresor">
+									<li class="li_sign"  >
+										<span data-scroll="the_mission"  class="tx_button miss">
+								       		 <b>Missions</b> 
+								       	</span>
+							       	</li>
+									
+									<li class="li_sign  tx_button_li"  >
+										<span  class="tx_button comp" ng-click="toCompetences()" >
+								       		 <b translate>page.skills</b> 
+								       	</span>
+							       	</li>
+									
+									<li class="li_sign expe"   >
+										<span class="tx_button" ng-click="gotoMyCv()" >
+								       		<b translate>page.jobs_studies</b>
+								       	</span>
+									</li>
+									
+									<li class="li_sign vide"  >
+								       		<span ng-click="haveAccess()" class="tx_button" >
+								       			<b>Videos</b>
+								       		</span>
+									</li>
+									<li class="li_sign cont"  >
+										<span  class="tx_button" ng-click="contact()">
+								       		 <b>CONTACT</b>
+								       	</span>
+									</li>
+									<li layout="row" class="icon-Globe_USA" >
+					       		  		<div  layout="colum">
+						       		  		<b ng-click="changeLanguage()">{{language}}</b> 
+						       		  	</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</md-card>
+					<md-card class="sub_menu_card" ng-show="menuClicked()">
+						<div class="sub_menu" layout="column" layout-align="center stretch" >	
+								<ul >
+									<li  data-scroll="the_mission" > 
+										<span class="tx_button miss">
+									       		 <b>Missions</b> 
+									       	</span>
+									</li>
+									<li ng-click="toCompetences()" > 
+										<span  class="tx_button comp" >
+									       		 <b translate>page.skills</b>
+									       	</span>
+									</li>
+									<li ng-click="gotoMyCv()"> 
+										<span class="tx_button"  >
+									       		<b translate>page.jobs_studies</b>
+								       	</span>
+									</li>
+									<li ng-click="haveAccess()"> 
+										<span  class="tx_button" >
+							       			<b>Videos</b>
+							       		</span>
+									</li>
+									<li ng-click="contact()">
+										<span  class="tx_button" >
+								       		 <b>CONTACT</b>
+								       	</span>
+									</li>
+								</ul>
+						</div>
+					</md-card>
+					
+		    	<div ng-view></div>
+				<button ng-click="toTop()" class="md-fab md-fab-bottom-right docs-scroll-fab md-button md-ink-ripple" type="button">
+			        <md-tooltip md-direction="top" ><span style="color: #000" translate>page.top</span></md-tooltip>
+			        <md-icon md-svg-src="img/svg/ic_arrow_up_24px.svg" class="ng-scope" role="img" aria-hidden="true">
+			        	<svg height="100%" viewBox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+					    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path>
+					    <path d="M0 0h24v24H0z" fill="none"></path>
+						</svg>
+					</md-icon>
+			      <div class="md-ripple-container" style=""></div>
+			   </button>
+			</div>
+   		</div>
+   </md-content>
+   <div layout="row" layout-align="center center" class="main_footer hide_footer">
+		<div class="header-user-bloc" >
+            <div class="header-user-profile-pic md-toolbar-item">
+                <img ng-src="img/fbk.png">
+            </div>
+            <div class="header-user-profile-pic md-toolbar-item">
+                <img ng-src="img/ytb.jpg">
+            </div>
+            <div class="header-user-profile-pic md-toolbar-item">
+                <img ng-src="img/gitnb.png">
+            </div>
+       </div>
+	</div>
+	</body>
+	
+<!-- 	<script async type="text/javascript" src="js/libs/google-analytics/analytics.js"></script> -->
+	<script type="text/javascript" src="js/libs/angular/1.5.5/angular.js"></script>
+	<script type="text/javascript" src="js/libs/angular/1.5.5/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular/1.5.5/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular/1.5.5/angular-aria.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular/1.5.5/angular-material/angular-material.min.js"></script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<script type="text/javascript" src="js/libs/angular-ui-tree/dist/angular-ui-tree.js"></script>
+	<script src="js/libs/angular/angular-translate.min.js"></script>
+	<script src="js/libs/angular/angular-ui-notification.js"></script>
+	<script type="text/javascript" src="js/libs/angular/angular-translate.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular/angular-translate-loader-static-files.js"></script>
+<!-- // 		( function (i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r] || function() { -->
+<!-- // 			(i[r].q = i[r].q || []).push(arguments)},i[r].l = 1*new Date();a=s.createElement(o), -->
+<!-- // 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) -->
+<!-- // 		})(window,document,'sccript','https://www.google-analytics.com/analytics.js','ga'); -->
+<!-- // 		ga('ceate','UA-','auto'); -->
+<!-- // 		ga('send','pageView') -->
+	</script>
+	<!-- angularjs -->
+	<script type="text/javascript" src="js/tests/message.js"></script>
+	<script type="text/javascript" src="js/tests/service.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/basic_js/noframe_work.js"></script>
+	<!-- 	controllers -->
+	<script type="text/javascript" src="js/controllers/UosCtrl.js"></script>
+	<!-- Services -->
+	<script type="text/javascript" src="js/services/UserService.js"></script>
+	<script type="text/javascript" src="js/services/ToolBarService.js"></script>
+	<script type="text/javascript" src="js/design.js"></script>
+	 
+</html>
