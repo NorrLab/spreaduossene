@@ -15,9 +15,11 @@
 				"uvch2":"MASTER DEGREE I COMMUNICATION SYSTEME INGENIERING",
 				"uvch3":"BACHELOR ELECTRICAL ENGINEERING AND INDUSTRIAL COMPUTING",
 				"wroclaw":"POLISH LANGUAGE",
+				"highSchool":"SCIENCE BACCALAUREATE",
 				"city":{
 					"uvch":"University of Valenciennes",
-					"wroclaw":"Wroclaw University of Science and Technology"
+					"wroclaw":"Wroclaw University of Science and Technology",
+					"libreville":"Jean Hilaire Obame High Scholl Libreville"
 				}
 			}
 		},
@@ -33,7 +35,18 @@
 			"lastName":"lastname",
 			"company":"company",
 			"confirm":"confirm password"
-		}
+		},
+		"preAbout":{
+				"content":{
+					"title":"ABOUT ME",
+					"story":"I could hear myself repeating deep, somewhere in my mind Napoleon Hill's words. Thoses words, I felt them accrossing like electromagnetic wave eache part of my body. In my vein, I could hear myself, in my belly I felt the vibration of the sound of my voice, my heart beat so loud that I could hear it, like a far away drump , giving rythm to those words..."
+		
+				},
+				"button":{
+					"continue":"continue",
+					"goToCv":"my cv"
+				}
+			}
 	},
 	"webSite":"Ulrich OSSENE&nbsp;|&nbsp;Sciences and Philosophy",
 	"comments":{

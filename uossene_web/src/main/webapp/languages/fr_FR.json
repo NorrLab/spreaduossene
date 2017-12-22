@@ -15,9 +15,11 @@
 				"uvch2":"MASTER I INGENIERIE DES SYSTEMES DE COMMUNICATION",
 				"uvch3":"LICENCE GENIE ELECTRIQUE INFORMATIQUE INDUSTRIELLE",
 				"wroclaw":"FORMATION LANGUE POLONAISE",
+				"highSchool":"BACCALAUR&Eacute;AT SCIENTIFIQUE",
 				"city":{
 					"uvch":"Universit&eacute; de Valenciennes",
-					"wroclaw":"Universit&eacute; polytechnique de Wroclaw"
+					"wroclaw":"Universit&eacute; polytechnique de Wroclaw",
+					"libreville":"Lyc&eacute;e Jean Hilaire Obame Libreville"
 				}
 			}
 		},
@@ -33,13 +35,24 @@
 			"lastName":"pr&eacute;nom",
 			"company":"entreprise",
 			"confirm":"confirmer password"
+		},
+		"preAbout":{
+			"content":{
+					"title":"UN PEU DE MOI",
+					"story":"Je m'entendais rep&eacute;ter tout bas, quelque part dans un coin de ma t&ecirc;te, les paroles de Napol&eacute;on Hill. Ces paroles, je les sentais parcourrir, comme une onde &eacute;lectromagn&eacute;tique chaque portion de mon corps. Dans mes veines je m'entendais, dans mon ventre je ressentais la vibration du son de ma voix, mon coeur battait si fort que je pouvais l'entendre, comme un tambour au loin, donner du rythme &agrave; ces paroles..."
+		
+				},
+				"button":{
+					"continue":"continuer",
+					"goToCv":"mon cv"
+				}
 		}
 	},
 	"webSite":"Ulrich OSSENE&nbsp;|&nbsp;Sciences et Philosophie",
 	"comments":{
 		"avis":"Avis",
 		"uosTitle":" Ing&eacute;nieur Syst&egrave;mes de Communication",
-		"uosComments":"C'est en 2004 que j'obtiens mon baccalaur&eacute;at S, tr&egrave;s vite j'ai enchain&eacute; des petits boulots, c'est ainsi que j'ai travaill&eacute; comme technicien de surface, ma&ccedil;on, plongeur dans un restaurant, agent de s&eacute;curit&eacute;. En 2008, alors que je me rendais sur mon lieu de travail situ&eacute; &agrave; Ramatuelle dans le Sud-Est de la France, o&ugrave; je travaillais comme agent de  s&eacute;curit&eacute;, l&agrave;, sur la route, j'ai le d&eacute;clique..."
+		"uosComments":"C'est en 2004 que j'obtiens mon baccalaur&eacute;at S, tr&egrave;s vite j'ai enchain&eacute; des petits boulots, c'est ainsi que j'ai travaill&eacute; comme technicien de surface, ma&ccedil;on, plongeur dans un restaurant, agent de s&eacute;curit&eacute;. En 2008, alors que je me rendais sur mon lieu de travail situ&eacute; &agrave; Ramatuelle dans le Sud-Est de la France, o&ugrave; je travaillais comme agent de  s&eacute;curit&eacute;, l&agrave;, sur la route, j'ai eu le d&eacute;clic..."
 	},
 	"missions":{
 		"sncf":{
