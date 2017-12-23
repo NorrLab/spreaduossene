@@ -59,8 +59,8 @@ li : hover{
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
     width: 100%;
-    height: 60%;
-     transition: all .8s ease-in-out;
+    height: 55%;
+    transition: all .3s ease-in-out;
 }
 
 .main__md__img_over{
@@ -70,9 +70,9 @@ li : hover{
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
 	 width: 101%;
-    height: 60%;
+    height: 55%;
     opacity: 0.9;
-    transition: all .8s ease-in-out;
+   transition: all .3s ease-in-out;
     transform: scale(1.01); 
 }
 
@@ -597,6 +597,10 @@ translate{
 	outline: none;
 }
 
+.techno_icon_li{
+	opacity: 1;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
 .container_mission{
 	padding: 16px;
 	text-align: justify;
@@ -617,3 +621,22 @@ img:focus {
     outline: none;
     border: 0;
  }
+ 
+ .ul_phone li{
+ 	float: left;
+ }
+ 
+ .class_phone_shown{
+ 	padding: 10px;
+ 	background: #83D34C;
+ 	width: 100%;
+	border-radius: 45px;
+	text-align: center;
+	color: #fff
+ }
+ 
+ ng-click : focus{
+  outline: none;
+    border: 0;
+ }
+ 
