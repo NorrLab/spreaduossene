@@ -446,7 +446,6 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 		
 		$scope.validateComment = function() {
 			$mdDialog.hide();
-//			alert()
 		};
 		
 		$scope.validateRegistration = function() {
@@ -460,17 +459,19 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 	}
 	
 	
-	$scope.goToOpen =  function() {
-		window.location.href='https://www.open.global/fr';
+//	$scope.goToOpen =  function() {
+//		window.location.href='https://www.open.global/fr';
+//	}
+	
+	$scope.getDetailMission =  function(missionId) {
+		$location.url('missionDetail/'+missionId);
+		$("html, body").animate({
+            scrollTop: 0
+        }, "slow")
 	}
 	
-	$scope.goToSncf =  function() {
-		window.location.href='http://www.sncf.com/fr/groupe/emploi/fiche-metier/maintenance-et-travaux-ingenierie-de-l-infrastructure';
-	}
-	
-//	formations
 	$scope.goToAston = function() {
-		window.location.href='http://www.aston-ecole.com/';
+		$location.url('missionDetail/2');
 	}
 	
 	
@@ -482,9 +483,9 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 		window.location.href='http://pwr.edu.pl/';
 	}
 	
-	$scope.goToAbw =  function() {
-		window.location.href='http://www.abusinessware.com/';
-	}
+//	$scope.goToAbw =  function() {
+//		window.location.href='http://www.abusinessware.com/';
+//	}
 	
 	$scope.goToCoe = function() {
 		window.location.href='https://www.coe.int/en/web/portal/home';
