@@ -7,7 +7,7 @@ a{
 	cursor: pointer;
 }
 img{
-/* 	cursor: pointer; */
+	cursor: pointer;
 }
 li : hover{
 	background: red;  
@@ -593,6 +593,10 @@ translate{
 	width: 45px;
 }
 
+.techno_icon_li:focus{
+	outline: none;
+}
+
 .container_mission{
 	padding: 16px;
 	text-align: justify;
@@ -608,3 +612,8 @@ translate{
 	margin-top: 9px;
 	margin-bottom: 9px
 }
+
+img:focus {
+    outline: none;
+    border: 0;
+ }
