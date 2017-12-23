@@ -7,7 +7,7 @@ a{
 	cursor: pointer;
 }
 img{
-	cursor: pointer;
+/* 	cursor: pointer; */
 }
 li : hover{
 	background: red;  
@@ -546,4 +546,65 @@ top: 50%; }
 
 translate{
 	color: #000
+}
+
+.mission-detail-left ul li{
+	float: left;
+/* 	margin: 3px; */
+}
+.mission-detail-left{
+    background: #92d7b2;
+    padding: 3px;
+    cursor: pointer;
+}
+
+
+.mission-detail-left-2{
+	background: #fff;
+	color: #000
+}
+.mission-detail-left-in{
+	 background: #92d7b2;
+	 font-size: 16px;
+	 padding: 3px;
+}
+
+.work_position{
+	height: 20px;
+	width: 20px
+}
+
+.situation div span{
+	color: #000
+}
+
+.job_position{
+	padding: 16px;
+	cursor: default;
+}
+
+.job_position div{
+	margin: 3px;
+	
+}
+
+.techno_icon{
+	height: 40px;
+	width: 45px;
+}
+
+.container_mission{
+	padding: 16px;
+	text-align: justify;
+}
+
+.container_mission_sub p{
+	padding: 9px 6px 4px 16px;
+	font-size: 12px;
+	color: #ccc
+}
+
+.mission_sub_title{
+	margin-top: 9px;
+	margin-bottom: 9px
 }

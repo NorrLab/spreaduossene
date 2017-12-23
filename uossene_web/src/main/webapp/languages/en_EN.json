@@ -76,6 +76,9 @@
 			"post":"Software Ingeneer J2EE ",
 			"duration" : "in progress",
 			"description":""
+		},
+		"missionDetail":{
+			"companySite":"Go to company website"
 		}
 	}
 }

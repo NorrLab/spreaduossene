@@ -83,6 +83,9 @@
 			"description2":"",
 			"description3":"",
 			"description4":""
+		},
+		"missionDetail":{
+			"companySite":"Allez sur le site de l'entrepise"
 		}
 	}
 }

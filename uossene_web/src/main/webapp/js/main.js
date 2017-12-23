@@ -1,4 +1,4 @@
-var app = angular.module("uosApp", ["pascalprecht.translate","ngRoute","ui-notification","ngMaterial","ngAnimate","services","ui.tree"],["SERVICES","COMPONENTS","DEMOS","PAGES","$routeProvider","$locationProvider","$mdThemingProvider","$mdIconProvider", function(e,t,a,n,o,l,i,s) {
+var app = angular.module("uosApp", ["pascalprecht.translate","ngRoute","ui-notification","ngMaterial","ngAnimate","services","ui.tree","LocalStorageModule"],["SERVICES","COMPONENTS","DEMOS","PAGES","$routeProvider","$locationProvider","$mdThemingProvider","$mdIconProvider", function(e,t,a,n,o,l,i,s) {
 	
 }]);
 app.config(['$routeProvider', function($routeProvider) {
@@ -22,6 +22,10 @@ app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/:userId/videos', {
 		templateUrl: 'partials/user/videos.html',
         controller: 'UosCtrl'
+    });
+	$routeProvider.when('/missionDetail/:missionId', {
+		templateUrl: 'partials/missionDetail.html',
+        controller: 'MissionCtrl'
     });
 	$routeProvider.otherwise({
         redirectTo: '/home',

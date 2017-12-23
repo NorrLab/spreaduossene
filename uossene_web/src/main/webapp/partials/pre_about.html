@@ -3,7 +3,7 @@
     <div class="dialog-header ">
             <h2 translate><span translate style="color: #000">page.preAbout.content.title</span></h2>
     </div>
-    <div class="dialog-description">
+    <div class="dialog-description login">
 	    <md-card-content>
 			  <p class="little_presentation">
 			    	<span translate style="color: #000">page.preAbout.content.story</span>
@@ -11,14 +11,13 @@
 			    </p>
 		</md-card-content>
 	</div>
-	<div class="button__dialog" layout="row" style="padding: 19px 0px 9px 0px">
+	<div class="button__dialog " layout="row" style="padding: 0px 0px 0px 0px">
          <div flex></div>
          
          <md-button class="continue_dialog"  ng-click="validate(true)">
          <span translate style="color: #000">page.preAbout.button.continue</span></md-button>
        	<md-button class=validate_dialog ng-click="validate(false)">
        		 <span translate style="color: #000">page.preAbout.button.goToCv</span>
-<!--        		<span>Mon CV</span> -->
        	</md-button>
      </div>
 </md-dialog>

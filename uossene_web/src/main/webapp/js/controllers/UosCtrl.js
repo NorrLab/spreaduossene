@@ -2,7 +2,7 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 	var $menuIsClicked = false;
 	var $outMenuIsClicked = true;
 	var $UserLocation;
-	$scope.language = "FR";
+	$scope.language = ToolBarService.getUserLocale();//"FR";
 	navigator.geolocation.getCurrentPosition( function(position){
 		$UserLocation = position;
 	});
@@ -144,22 +144,10 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 	 	},1);
 	}
 	
-	$scope.changeLanguage = function(locale) {
+	$scope.changeLanguage = function() {
 		
-		if($scope.language=== "FR"){
-			$scope.language= "EN";
-			locale="en_EN"
-		}else{
-			$scope.language= "FR";
-			locale="fr_FR"
-		}
-		
-		var promise = ToolBarService.changeLanguage(locale);
-		promise.then(function(response) {
-			
-		}, function(error) {
-			
-		})
+		$scope.language = ToolBarService.changeLanguage($scope.language);
+
 	}
 	
 	$scope.competences = [
