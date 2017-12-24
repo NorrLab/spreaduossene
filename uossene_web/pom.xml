@@ -16,6 +16,11 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+   	  <groupId>uossene</groupId>
+	  <artifactId>uossene_service</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>uossene_web</finalName>

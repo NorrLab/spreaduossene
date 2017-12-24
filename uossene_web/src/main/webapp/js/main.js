@@ -39,17 +39,6 @@ app.config(['$routeProvider', function($routeProvider) {
 app.config(["messageProvider", function(messageProvider) {
 	messageProvider.setText('hello millionnaire TX')
 }])
-//app.config('$translateProvider', function($translateProvider) {
-//	
-//	$translateProvider.preferedLanguage="fr_FR";
-//	$translateProvider.determinePreferredLanguage();
-//    $translateProvider.fallbackLanguage('fr_FR');
-//    $translateProvider.useSanitizeValueStrategy('escapeParameters');
-//    $translateProvider.useStaticFileLoader({
-//    	prefix:'/languages/',
-//    	suffix: '.json'
-//    })
-//})
 
 app.config(['$translateProvider', function ($translateProvider) {
     $translateProvider.preferredLanguage('en_EN');

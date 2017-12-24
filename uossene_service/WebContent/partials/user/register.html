@@ -1,0 +1,44 @@
+<md-dialog  aria-label="Function change dialog" ng-cloak flex="65">
+   <div  ng-show="!registered" class="dialog-header ">
+            <h2 translate>page.register.title</h2>
+            
+    </div>
+<!--     <div  ng-show="registered" class="dialog-header "> -->
+<!--             <h2 translate>CR&Eacute;ATION DE COMPTE</h2> -->
+            
+<!--     </div> -->
+    <div class="login" ng-show="!registered">
+       	<div flex="100" class="login" layout="row" >
+       	 	<md-input-container class="md-block" flex-gt-sm>
+	           <label translate>page.register.name</label>
+	            <input type="text" ng-model="userRegistrate.firstName" autocomplete="off" >
+          	</md-input-container>
+          	<md-input-container class="md-block" flex-gt-sm>
+	            <label translate>page.register.lastName</label>
+	            <input type="text" ng-model="userRegistrate.lastName" autocomplete="off" >
+          	</md-input-container>
+          	<md-input-container class="md-block" flex-gt-sm>
+	            <label translate>page.register.company</label>
+	            <input type="text" ng-model="userRegistrate.entreprise" autocomplete="off" >
+          	</md-input-container>
+       		<md-input-container class="md-block" flex-gt-sm>
+	            <label>email</label>
+	            <input ng-model="userRegistrate.email" autocomplete="off" >
+	          </md-input-container>
+	          <md-input-container class="md-block" flex-gt-sm>
+	            <label>password</label>
+	            <input type="password" ng-model="userRegistrate.password" autocomplete="off" >
+	          </md-input-container>
+	          <md-input-container class="md-block" flex-gt-sm>
+	            <label translate>page.register.confirm</label>
+	            <input type="password" ng-model="userRegistrate.passwordConfirm" autocomplete="off" >
+	          </md-input-container>
+       	</div><br>
+    </div>
+    <div class="login" ng-show="registered">
+    	<p>Une mail de validation vous a &eacute;t&eacute; envoy&eacute; &agrave; l'adresse <i style="color: blue">{{userRegistrate.email}}</i></p>
+    </div>
+	<md-button ng-show="!registered" class=validate_dialog ng-click="validateRegistration()">
+		<span translate>page.login.validate</span>
+	</md-button>
+</md-dialog>

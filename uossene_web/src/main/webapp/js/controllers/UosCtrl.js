@@ -1,6 +1,9 @@
-app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog","UserService","ToolBarService","$translate", function($scope,message,$location,$timeout,$mdDialog,UserService,ToolBarService,$translate) {
+app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog","UserService","ToolBarService","$translate","$http",
+	"MissionService",
+	function($scope,message,$location,$timeout,$mdDialog,UserService,ToolBarService,$translate,$http,MissionService) {
 	var $menuIsClicked = false;
 	var $outMenuIsClicked = true;
+	
 	var $UserLocation;
 	$scope.language = ToolBarService.getUserLocale();//"FR";
 	navigator.geolocation.getCurrentPosition( function(position){
@@ -549,22 +552,23 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 			$timeout( function() {
 				removeCrossMenu();
 			},1)
-	    	
 	    }        
 	});
 	
-	//end of controller
+	var init = function() {
+		MissionService.getAllMissions().then( function(response) {
+			$scope.missions = response;
+		}, function(error) {
+			console.error(error)
+		});
+	}
+	
+	init();
 }])
 
 document.querySelector( "#nav-toggle" )
 	  .addEventListener( "click", function() {
 	    this.classList.toggle( "active" );
 	  });
-
-document.querySelector( ".nav-toggle_outer" )
-.addEventListener( "click", function() {
-  this.classList.toggle( "active" );
-});
-
 
 

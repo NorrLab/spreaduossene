@@ -103,92 +103,83 @@
 			</div>
 			
 			<div layout="row">
-				<div  flex="45">
-					<md-card ng-click="getDetailMission(1)" id="the_mission" class=" main__md__job">
-					<img ng-src="img/sncf_infra.jpg" class=" main__md__img__job" alt="Washed Out">
+				<div  flex="45" ng-repeat="job in missions">
+					<md-card ng-click="getDetailMission(job.missionId)" id="the_mission" class=" main__md__job">
+						<img ng-src="{{job.company.companyPictureUrl}}" class=" main__md__img__job" alt="Washed Out">
+<!-- 						<img ng-src="img/sncf_infra.jpg" class=" main__md__img__job" alt="Washed Out"> -->
 						<md-card-content>
 							<md-card-title>
 							    <md-card-title-text>
-							      <span  class="md-headline"><b translate>missions.sncf.post</b> - 2014 (<span class="md-headline" translate>missions.sncf.duration</span>)</span>
+							    	<span  class="md-headline"><b >{{job.missiontitle}}</b> - {{job.missionDuration}} (<span class="md-headline" translate>missions.sncf.duration</span>)</span>
+<!-- 							      <span  class="md-headline"><b translate>missions.sncf.post</b> - 2014 (<span class="md-headline" translate>missions.sncf.duration</span>)</span> -->
 							    </md-card-title-text>
 						  	</md-card-title>
-							<p><b>A</b>u sein d'une &eacute;quipe de 6 personnes, j'avais en charge la mise en place d'un syst&egrave;me
-							de t&eacute;l&eacute;surveillance des lignes de chemins de fer.</p>
-							<br>
-							<p>
-							Le syst&egrave;me est donc un logiciel autonome d&eacute;velopp&eacute; en Java avec le framework 
-							<b>SWING</b>, le SGDB utilis&eacute; <b>MySQL</b> m'a permis de mieux g&eacute;rer l'ensemble de donn&eacute;es de l'application.
+							<p style="text-align: justify;">
+								{{job.missionIntro}}
 							</p>
 							 
 						</md-card-content>
-						
+						{{mission | json}}
 					</md-card>
 				</div>
-				<div flex="45">
-					<md-card ng-click="getDetailMission(2)"  class=" main__md__job">
-					<img ng-src="img/grpe-open.png" class=" main__md__img__job  " alt="Washed Out">
-						<md-card-content>
-							<md-card-title>
-							    <md-card-title-text>
-							      <span class="md-headline"><b translate>missions.open.post</b> - 2016<br> (<span class="md-headline" translate>missions.open.duration</span>)</span>
-							    </md-card-title-text>
-						  	</md-card-title>
-							<p>
-								<b>D</b>ans un groupe de 4 stagiaires, j'ai d&eacute;velopp&eacute; une applcation de gestion
-								des collaborateurs OPEN.
-							</p>
-							<br>
-							<p>
-								Lors de ce stage j'ai donc pu me familiariser avec le <b>SGBD Postgres </b>, des frameworks tels que <b>Spring</b>, <b>Hibernate</b> pour ce qui est du d&eacute;veloppement 
-								de la couche m&eacute;tier et le framework <b>angular 2</b> pour l'interface utilisateur.
-							</p>
-						</md-card-content>
-						
-					</md-card>
-				</div>
-				<div flex="45">
-					<md-card  ng-click="getDetailMission(3)" class=" main__md__job">
-					<img ng-src="img/abw.jpeg" class=" main__md__img__job" alt="Washed Out">
-						<md-card-content>
-							<md-card-title>
-							    <md-card-title-text>
-							      <span class="md-headline"><b translate>missions.abw.post</b> - 2016 (<span class="md-headline" translate>missions.abw.duration</span>)</span>
-							    </md-card-title-text>
-						  	</md-card-title>
-							<p style="color: black" translate>
-								missions.abw.description1
-							</p>
-							<p>
-								<span style="color: black"  translate>missions.abw.description2</span>
-								<b>SonarQube</b>, <span style="color: black" translate>missions.abw.description3</span> <b>Play 2</b>, <b>angular 1.5.5</b>.<span style="color: black" translate>missions.abw.description4</span> <b>Postgres</b>.
-							</p>
-						</md-card-content>
-						
-					</md-card>
-				</div>
-				<div  flex="45">
-					<md-card   ng-click="goToCoe()" class=" main__md__job">
-					<img ng-src="img/coe.png" class=" main__md__img__job" alt="Washed Out">
-						<md-card-content>
-							<md-card-title>
-							    <md-card-title-text>
-							      <span class="md-headline"><b translate>missions.coe.post</b> - 2017 (<span class="md-headline" translate>missions.coe.duration</span>)</span>
-							    </md-card-title-text>
-						  	</md-card-title>
-<!-- 							<p><b>L</b>iferay est un portail  -->
-<!-- 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown  -->
-<!-- 							printer took a galley of type and scrambled  -->
+<!-- 				<div flex="45"> -->
+<!-- 					<md-card ng-click="getDetailMission(2)"  class=" main__md__job"> -->
+<!-- 					<img ng-src="img/grpe-open.png" class=" main__md__img__job  " alt="Washed Out"> -->
+<!-- 						<md-card-content> -->
+<!-- 							<md-card-title> -->
+<!-- 							    <md-card-title-text> -->
+<!-- 							      <span class="md-headline"><b translate>missions.open.post</b> - 2016<br> (<span class="md-headline" translate>missions.open.duration</span>)</span> -->
+<!-- 							    </md-card-title-text> -->
+<!-- 						  	</md-card-title> -->
+<!-- 							<p> -->
+<!-- 								<b>D</b>ans un groupe de 4 stagiaires, j'ai d&eacute;velopp&eacute; une applcation de gestion -->
+<!-- 								des collaborateurs OPEN. -->
 <!-- 							</p> -->
-<!-- 							<br><p>it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,  -->
-<!-- 							remaining essentially unchanged.  -->
+<!-- 							<br> -->
+<!-- 							<p> -->
+<!-- 								Lors de ce stage j'ai donc pu me familiariser avec le <b>SGBD Postgres </b>, des frameworks tels que <b>Spring</b>, <b>Hibernate</b> pour ce qui est du d&eacute;veloppement  -->
+<!-- 								de la couche m&eacute;tier et le framework <b>angular 2</b> pour l'interface utilisateur. -->
 <!-- 							</p> -->
-							<div class="current_mission">
-								<img alt="" ng-src="img/stop.png" >
-							</div>
-							</md-card-content>
+<!-- 						</md-card-content> -->
 						
-					</md-card>
-				</div>
+<!-- 					</md-card> -->
+<!-- 				</div> -->
+<!-- 				<div flex="45"> -->
+<!-- 					<md-card  ng-click="getDetailMission(3)" class=" main__md__job"> -->
+<!-- 					<img ng-src="img/abw.jpeg" class=" main__md__img__job" alt="Washed Out"> -->
+<!-- 						<md-card-content> -->
+<!-- 							<md-card-title> -->
+<!-- 							    <md-card-title-text> -->
+<!-- 							      <span class="md-headline"><b translate>missions.abw.post</b> - 2016 (<span class="md-headline" translate>missions.abw.duration</span>)</span> -->
+<!-- 							    </md-card-title-text> -->
+<!-- 						  	</md-card-title> -->
+<!-- 							<p style="color: black" translate> -->
+<!-- 								missions.abw.description1 -->
+<!-- 							</p> -->
+<!-- 							<p> -->
+<!-- 								<span style="color: black"  translate>missions.abw.description2</span> -->
+<!-- 								<b>SonarQube</b>, <span style="color: black" translate>missions.abw.description3</span> <b>Play 2</b>, <b>angular 1.5.5</b>.<span style="color: black" translate>missions.abw.description4</span> <b>Postgres</b>. -->
+<!-- 							</p> -->
+<!-- 						</md-card-content> -->
+						
+<!-- 					</md-card> -->
+<!-- 				</div> -->
+<!-- 				<div  flex="45"> -->
+<!-- 					<md-card   ng-click="goToCoe()" class=" main__md__job"> -->
+<!-- 					<img ng-src="img/coe.png" class=" main__md__img__job" alt="Washed Out"> -->
+<!-- 						<md-card-content> -->
+<!-- 							<md-card-title> -->
+<!-- 							    <md-card-title-text> -->
+<!-- 							      <span class="md-headline"><b translate>missions.coe.post</b> - 2017 (<span class="md-headline" translate>missions.coe.duration</span>)</span> -->
+<!-- 							    </md-card-title-text> -->
+<!-- 						  	</md-card-title> -->
+<!-- 							<div class="current_mission"> -->
+<!-- 								<img alt="" ng-src="img/stop.png" > -->
+<!-- 							</div> -->
+<!-- 							</md-card-content> -->
+						
+<!-- 					</md-card> -->
+<!-- 				</div> -->
 			</div>
 			<div layout="row" style="padding: 6px">
 			
