@@ -1,8 +1,6 @@
 
-app.controller("MissionCtrl",["$scope","message","$location","$timeout","$mdDialog","UserService","ToolBarService","$translate","$http","MissionService", function($scope,message,$location,$timeout,$mdDialog,UserService,ToolBarService,$translate,$http,MissionService) {
-
-//app.controller("MissionCtrl",["$scope","$location","$timeout","MissionService", "$mdDialog","$translate", function($scope,message,$location,$timeout,
-//		MissionService, $mdDialog,$translate) {
+app.controller("MissionCtrl",["$scope","message","$location","$timeout","$mdDialog","UserService","ToolBarService","$translate","$http","MissionService","$routeParams",  
+	function($scope,message,$location,$timeout,$mdDialog,UserService,ToolBarService,$translate,$http,MissionService,$routeParams) {
 	$scope.getPhoneNumber = function($scope,$timeout) {
 
 		var myEl = angular.element( document.querySelector( '#my_phone_class' ) );
@@ -26,5 +24,12 @@ app.controller("MissionCtrl",["$scope","message","$location","$timeout","$mdDial
 			 
 		}
 	}
-//	console.log(MissionService)
+	
+	 MissionService.getMissionById($routeParams.missionId).then( function(response) {
+		 $scope.mission = response;
+		 console.log( $scope.mission)
+	}, function(error) {
+		console.error(error);
+	});
+	
 }])

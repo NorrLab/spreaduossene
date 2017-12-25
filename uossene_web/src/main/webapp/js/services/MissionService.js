@@ -29,6 +29,12 @@ app.factory("MissionService", function($http, $q) {
 		getMissionsByTechnologyKeyWord: function(keyWordArray) {
 			var url = 'http://localhost:8080/uossene_service/saerch-mission/'+keyWordArray;
 			var deferred = this.executeRequest(url,methodeGet,null);
+			return deferred;
+		},
+		getMissionById: function(missionId) {
+			var url = 'http://localhost:8080/uossene_service/mission/'+missionId;
+			var deferred = this.executeRequest(url,methodeGet,null);
+			return deferred;
 		},
 		executeRequest: function(url, methodeGet, payLoad) {
 			

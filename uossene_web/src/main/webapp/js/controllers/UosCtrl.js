@@ -520,7 +520,14 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 		};
 	
 	$scope.detectDevice = function() {
-		if( isMobile.any() ) return true;
+		if( isMobile.any() ){
+			var myEl = angular.element( document.querySelector( '#div_button_comment'));
+			myEl.removeClass('div_button_comment');
+			return true;
+			
+		}else{
+			return false;
+		}
 	}
 	
 	

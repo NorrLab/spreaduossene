@@ -30,7 +30,6 @@ public  abstract class GenericServiceImpl<T> implements GenericService<T> {
 
 	@Override
 	public T getById(Integer id) {
-		 
 		return getDao().getById(id);
 	}
 	/**

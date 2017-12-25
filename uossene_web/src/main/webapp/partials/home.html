@@ -75,30 +75,15 @@
 						              	</p>
 							          </div>
 							        </md-list-item>
-				       			  <md-divider ></md-divider>	
-							        <md-list-item class="md-3-line md-long-text md-long-opinion">
-							          <div flex="25">
-							          	<div>	
-							          		<img ng-src="img/hamell.jpg" class="md-avatar" alt="{{todos[0].who}}" />
-							          	</div>
-									  	 <div class="colleagues_opinions">
-									  	 	<h6>Jack Gruntter, COE</h6>
-							  	 		</div>
-							          </div>
-							          <div flex="75" class="md-list-item-text">
-							            <h3>{{ todos[1].who }}</h3>
-							            <p>
-							              J'ai connu <b>Ulrich</b> &agrave; la fac, depuis on est rest&eacute; de bons amis, la pens&eacute;e positive c'est lui 
-							              qui me l'a apprise.  
-						              	</p>
-							          </div>
-							        </md-list-item>
-							       
-								
 		      				</md-list>
 						</md-card-content>
 						
 					</md-card>
+					<div layout="row" id="div_button_comment" class="div_button_comment" layout-align="center center" >
+						<md-button class="button_comment"  ng-click="haveAccess(true)">
+							commenter
+						</md-button>
+					</div>
 				</div>
 			</div>
 			
@@ -110,7 +95,7 @@
 						<md-card-content>
 							<md-card-title>
 							    <md-card-title-text>
-							    	<span  class="md-headline"><b >{{job.missiontitle}}</b> - {{job.missionDuration}} (<span class="md-headline" translate>missions.sncf.duration</span>)</span>
+							    	<span  class="md-headline"><b >{{job.missionGrade}}</b> - ( {{job.missionDuration}} ) </span><!-- (<span class="md-headline" translate>missions.sncf.duration</span>) -->
 <!-- 							      <span  class="md-headline"><b translate>missions.sncf.post</b> - 2014 (<span class="md-headline" translate>missions.sncf.duration</span>)</span> -->
 							    </md-card-title-text>
 						  	</md-card-title>
@@ -119,7 +104,7 @@
 							</p>
 							 
 						</md-card-content>
-						{{mission | json}}
+<!-- 						{{mission | json}} -->
 					</md-card>
 				</div>
 <!-- 				<div flex="45"> -->

@@ -66,7 +66,7 @@ public class DaoTest {
 		mission.setMissionDuration("9 months");
 		mission.setMissionIntro("missoin1 intro");
 		mission.setMissionTaskDone("much");
-		mission.setMissiontitle("I am rich");
+		mission.setMissionTitle("I am rich");
 		mission.setMissionStartDate(new Date());
 		missionDao.create(mission);
 		

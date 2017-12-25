@@ -59,8 +59,10 @@ li : hover{
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
     width: 100%;
-    height: 55%;
-    transition: all .3s ease-in-out;
+    height: 50%;
+    transition: all .5s ease-in-out;
+    
+    overflow: hid
 }
 
 .main__md__img_over{
@@ -70,9 +72,9 @@ li : hover{
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
 	 width: 101%;
-    height: 55%;
+    height: 50%;
     opacity: 0.9;
-   transition: all .3s ease-in-out;
+   transition: all .5s ease-in-out;
     transform: scale(1.01); 
 }
 
@@ -90,11 +92,11 @@ img: hover{
     -webkit-flex: 0 0 auto;
     /* flex: 0 0 auto; */
     width: 100%;
-    height: 159px;
+/*     height: 159px; */
 }
 .main__md__job{
 	padding: 9px;
-	height: 620px;
+	height:  630px;
 	overflow: hidden;
 }
 
@@ -250,11 +252,16 @@ md-nav-item{
 	position: relative;
 }
 
+.header-user-profile-pic img{
+    background-color: #000
+}
+
 
 .header-user-profile-pic{
     float: left;
     margin-right: 5px;
     padding: 0 10px;
+    background: #000
 /*     border-left: 1px solid rgba(255,255,255,0.2); */
 }
 .header-user-profile-pic : hover{
@@ -640,3 +647,10 @@ img:focus {
     border: 0;
  }
  
+ .button_comment{
+ 	background: #92d7b2;;
+ }
+ 
+ .div_button_comment{
+ 	margin: 40px;
+ }

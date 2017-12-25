@@ -27,7 +27,7 @@ public class Company implements Serializable{
 	private String companyFullName;
 	private String city;
 	private String country;
-	
+	private String companyWebSite;
 	public Company() 
 	{
 
@@ -88,6 +88,15 @@ public class Company implements Serializable{
 	public void setCompanyFullName(String companyFullName) {
 		this.companyFullName = companyFullName;
 	}
+
+	public String getCompanyWebSite() {
+		return companyWebSite;
+	}
+
+	public void setCompanyWebSite(String companyWebSite) {
+		this.companyWebSite = companyWebSite;
+	}
+	
 	
 	
 }

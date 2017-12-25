@@ -22,12 +22,14 @@ public class Mission implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer missionId;
-	private String missiontitle;
+	private String missionTitle;
 	private String missionIntro;
 	private String missionDuration;
 	private String missionGrade;
 	private String missionDetail;
+	private String missionDetailTitle;
 	private String missionTaskDone;
+	private String missionTaskDoneTitle;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date missionStartDate;
@@ -49,12 +51,12 @@ public class Mission implements Serializable{
 		this.missionId = missionId;
 	}
 
-	public String getMissiontitle() {
-		return missiontitle;
+	public String getMissionTitle() {
+		return missionTitle;
 	}
 
-	public void setMissiontitle(String missiontitle) {
-		this.missiontitle = missiontitle;
+	public void setMissionTitle(String missiontitle) {
+		this.missionTitle = missiontitle;
 	}
 
 	public String getMissionIntro() {
@@ -119,6 +121,22 @@ public class Mission implements Serializable{
 
 	public void setMissionEndDate(Date missionEndDate) {
 		this.missionEndDate = missionEndDate;
+	}
+
+	public String getMissionDetailTitle() {
+		return missionDetailTitle;
+	}
+
+	public void setMissionDetailTitle(String missionDetailTitle) {
+		this.missionDetailTitle = missionDetailTitle;
+	}
+
+	public String getMissionTaskDoneTitle() {
+		return missionTaskDoneTitle;
+	}
+
+	public void setMissionTaskDoneTitle(String missionTaskDoneTitle) {
+		this.missionTaskDoneTitle = missionTaskDoneTitle;
 	}
 
 }
