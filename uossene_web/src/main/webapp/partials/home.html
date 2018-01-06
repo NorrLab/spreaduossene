@@ -24,56 +24,22 @@
 						</div>
 						<md-card-content class="user_opinions_inner">
 							<md-list flex> 
-							        <md-list-item class="md-3-line  md-long-text md-long-opinion">
+							        <md-list-item ng-repeat="user in userAndCommented" class="md-3-line  md-long-text md-long-opinion">
 							          <div flex="25" >
 							          	<div>
-							          		<img ng-src="img/jenn.jpg" class="md-avatar" alt="{{todos[0].who}}" />
+							          		<img ng-src="{{user.userPictureUrl}}" class="md-avatar" alt="{{todos[0].who}}" />
 						          		</div>	
-							          	<div class="colleagues_opinions" >		
-							          		<h6 >Alice Meja, SNCF</h6>
+							          	<div class="colleagues_opinions" >	
+							          		<h6 >{{user.userFirstName}} {{user.userLastName}}, {{user.userCompany}}</h6>
 						          		</div>
 						          	  </div>
-							          <div flex="75"  class="md-list-item-text">
-							            <p>
-							              <b>Ulrich OSSENE</b> est une personne tr&egrave;s cr&eacute;ative, 
-							              pleine d'&eacute;nergie avec qui il fait bon de tavailler.
-							              </p>
-							          </div>
-							        </md-list-item>
-							        <md-divider ></md-divider>
-							        <md-list-item class="md-3-line md-long-text md-long-opinion">
-								  	 <div flex="25" >
-									  	 <div>
-									  	 	<img ng-src="img/kamit.jpg" class="md-avatar" alt="{{todos[0].who}}" />
-									  	 </div>
-									  	 <div class="colleagues_opinions">
-									  	 	<h6>Paul Marie Gualt Meja, T&S</h6>
-							  	 		</div>
-								  	 </div>
-							          <div flex="75" class="md-list-item-text">
-							            <h3>{{ todos[0].who }}</h3>
-							            <p>
-							            	J'ai travaill&eacute; avec <b>Ulrich</b> sur un projet Java JEE, 
-							            	ce mec est une boule &eacute;nerg&eacute;tique  </p>
-							          </div>
-							        </md-list-item>
-							        <md-divider ></md-divider>
-							        <md-list-item class="md-3-line md-long-text md-long-opinion">
-							          <div flex="25">
-							          	<div>	
-							          		<img ng-src="img/hamell.jpg" class="md-avatar" alt="{{todos[0].who}}" />
-							          	</div>
-									  	 <div class="colleagues_opinions">
-									  	 	<h6>Jack Gruntter, COE</h6>
-							  	 		</div>
-							          </div>
-							          <div flex="75" class="md-list-item-text">
-							            <h3>{{ todos[1].who }}</h3>
-							            <p>
-							              J'ai connu <b>Ulrich</b> &agrave; la fac, depuis on est rest&eacute; de bons amis, la pens&eacute;e positive c'est lui 
-							              qui me l'a apprise.  
-						              	</p>
-							          </div>
+		<div flex="75" class=" comment_class">
+			<p>
+				<b>{{user.userComment.userComment.substring(0, 1)}}</b>{{user.userComment.userComment.substring(1,
+				user.userComment.userComment.length)}}
+			</p>
+		</div>
+		<md-divider ></md-divider>
 							        </md-list-item>
 		      				</md-list>
 						</md-card-content>

@@ -1,8 +1,13 @@
-app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog","UserService","ToolBarService","$translate","$http",
+app.controller("UosCtrl",["localStorageService","$scope","message","$location","$timeout","$mdDialog","UserService","ToolBarService","$translate","$http",
 	"MissionService",
-	function($scope,message,$location,$timeout,$mdDialog,UserService,ToolBarService,$translate,$http,MissionService) {
+	function(localStorageService,$scope,message,$location,$timeout,$mdDialog,UserService,ToolBarService,$translate,$http,MissionService) {
 	var $menuIsClicked = false;
 	var $outMenuIsClicked = true;
+	
+	$scope.currentUser={
+			"userEmail":"",
+			"userPassWord":""
+	};
 	
 	var $UserLocation;
 	$scope.language = ToolBarService.getUserLocale();//"FR";
@@ -349,7 +354,7 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
      })
 	
      $scope.haveAccess = function(logInForComment) {
-    	if( UserService.isLogIn()){
+    	if( UserService.isLogIn($scope.currentUser)){
     		
     		if (logInForComment){
         		$mdDialog.show({
@@ -361,14 +366,31 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
     	            	logInForComment : logInForComment
     	    		}
     	        }).then(function () {
+    	        	
     	            }
     	        );
         		removeCrossMenu();
         	}else{
-        		
+        		$mdDialog.show({
+    	            controller: LoginCtrl,
+    	            templateUrl: 'partials/user/login.html',
+    	            parent: angular.element(document.body),
+    	            clickOutsideToClose: true,
+    	            locals:{
+    	            	logInForComment : logInForComment
+    	    		}
+    	        }).then(function () {
+    	            }
+    	        );
+        		removeCrossMenu();
         	} 
     		
     	}else{
+//    		UserService.login($scope.currentUser).then( function(response) {
+//    			$scope.currentUser  = response.data;
+//			}, function(error) {
+//				console.error('Grave!!!')
+//			});
     		$mdDialog.show({
 	            controller: LoginCtrl,
 	            templateUrl: 'partials/user/login.html',
@@ -396,40 +418,32 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 				passwordConfirm :""
 		}
 		console.log($scope)
-		$scope.biography="" +
-				"ldjkvdvjklhdkvlhfdvkhv" +
-				"d;vndvndvnfkvnkfnvk" +
-				"dnvfnvkfnvkfnvfnvkfnvknf" +
-				"vfnvfknvfkvnfkvnfkvnfknvkfnvf" +
-				"";
+//		$scope.biography="" +
+//				"ldjkvdvjklhdkvlhfdvkhv" +
+//				"d;vndvndvnfkvnkfnvk" +
+//				"dnvfnvkfnvkfnvfnvkfnvknf" +
+//				"vfnvfknvfkvnfkvnfkvnfknvkfnvf" +
+//				"";
 		$scope.login = function() {
 				
-				if(!logInForComment && UserService.isLogIn()){
+				if(!logInForComment){//&& UserService.isLogIn()
 					$mdDialog.hide();
-					var $email = $scope.email,
-					$password = $scope.password;
 					
-					var promise = UserService.login($email,$password);
-					promise.then( function(res) {
-						$location.url('/'+res.data.id+'/videos');
-					}, function(err) {
-						console.error(err)
-					});
-				}else if(logInForComment && UserService.isLogIn()){
-					$mdDialog.show({
-	    	            controller: LoginCtrl,
-	    	            templateUrl: 'partials/user/user_comment.html',
-	    	            parent: angular.element(document.body),
-	    	            clickOutsideToClose: true,
-	    	            locals:{
-	    	            	logInForComment : logInForComment
-	    	    		}
-	    	        }).then(function () {
-	    	            }
-	    	        );
+					$scope.medias  = UserService.accessMedia($scope.currentUser);
+					$location.url('/user/videos/');
+				}else if(logInForComment){//&& UserService.isLogIn($scope.currentUser)
+					if(UserService.createComment($scope.currentUser)!= null)
+						UserService.createComment($scope.currentUser).then( function(response) {
+							localStorageService.set("currentUser",response.data)
+							UserService.callMdDialog()
+						}, function() {
+							console.error('error')
+						});
 				}else{
 					$('#email').css("border-color","red")//addClass("input_error");
 					$('#password').css("border-color","red")//.addClass("input_error");
+					UserService.login($scope.currentUser);
+					removeCrossMenu();
 				}
 		}
 		
@@ -449,6 +463,11 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 		
 		$scope.validateComment = function() {
 			$mdDialog.hide();
+			
+			UserService.validateComment($scope.messages).then( function() {
+				init();
+//				location.reload();
+			});
 		};
 		
 		$scope.validateRegistration = function() {
@@ -562,7 +581,16 @@ app.controller("UosCtrl",["$scope","message","$location","$timeout","$mdDialog",
 	    }        
 	});
 	
+	
+	
 	var init = function() {
+		
+		UserService.getUserWithComment().then(function(response) {	
+			$scope.userAndCommented = response.data;
+		}, function(error) {
+			console.log("errorss!!!!....")
+		});
+		
 		MissionService.getAllMissions().then( function(response) {
 			$scope.missions = response;
 		}, function(error) {

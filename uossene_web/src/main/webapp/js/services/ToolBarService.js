@@ -39,7 +39,7 @@ app.factory("ToolBarService", function($http,$translate,UserService,localStorage
 			var currentLocale;
 			
 			if(UserService.isLogIn()){
-				
+				currentLocale = localStorageService.get('locale');
 			}else{
 				currentLocale = localStorageService.get('locale');
 
@@ -48,8 +48,10 @@ app.factory("ToolBarService", function($http,$translate,UserService,localStorage
 					
 					localStorageService.set('locale',currentLocale);
 				}
-				var language=this.getLocalKey(currentLocale).language;
 			}
+			
+			var language=this.getLocalKey(currentLocale).language;
+			
 			
 			$translate.use(language).then( function(response) {
 				

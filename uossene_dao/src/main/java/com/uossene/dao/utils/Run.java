@@ -1,4 +1,4 @@
-package com.uossene.dao;
+package com.uossene.dao.utils;
 
 public class Run {
 

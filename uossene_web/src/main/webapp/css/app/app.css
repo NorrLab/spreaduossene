@@ -137,6 +137,8 @@ img: hover{
     display: block;
     padding-top: 3px;
     border-radius: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 md-card .tx__card__title {
@@ -654,3 +656,13 @@ img:focus {
  .div_button_comment{
  	margin: 40px;
  }
+ 
+ .comment_class p{
+/* 	 line-height: 16px; */
+    font-size:13px
+ }
+ 
+  .comment_class{
+    padding: 9px;
+ }
+ 
