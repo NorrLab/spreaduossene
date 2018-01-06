@@ -1,4 +1,4 @@
-package com.uossene.dao;
+package com.uossene.dao.utils;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

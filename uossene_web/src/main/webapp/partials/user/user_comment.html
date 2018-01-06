@@ -5,13 +5,13 @@
     </div>
     <div class="login" >
 		<md-input-container>
-		    <textarea name="bio" ng-model="biography" required md-maxlength="100">
+		    <textarea name="bio" ng-model="messages" required md-maxlength="100">
 		    
 		    	
 		    </textarea>
 		  </md-input-container>
     </div>
-	<md-button class=validate_dialog ng-click="validateComment()">
+	<md-button class=validate_dialog ng-click="validateComment(messages)">
 		<span>valider</span>
 	</md-button>
 </md-dialog>

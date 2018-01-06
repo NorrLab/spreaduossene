@@ -1,5 +1,8 @@
 package com.uossene.service.impl;
 
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
+
 import com.uossene.dao.interfaces.GenericDao;
 import com.uossene.service.interfaces.GenericService;
 
@@ -9,9 +12,10 @@ public  abstract class GenericServiceImpl<T> implements GenericService<T> {
 	{
 	
 	}
-
+	
+	@Transactional 
 	@Override
-	public T create(T t) {
+	public T create(@RequestBody T t) {
 		// TODO Auto-generated method stub
 		return getDao().create(t);
 	}

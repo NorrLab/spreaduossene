@@ -5,14 +5,16 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.uossene.service.interfaces.GenericService;
 
 @CrossOrigin
-public abstract class GenericRestControler<T> {
+public abstract class GenericRestController<T> {
 	
 	public abstract GenericService<T> getService();
 	
@@ -22,7 +24,7 @@ public abstract class GenericRestControler<T> {
 	 * @return
 	 */
 	@RequestMapping(method=RequestMethod.POST)
-	public T create( T t ) throws ServerException
+	public T create(@RequestBody T t ) throws ServerException
 	{
 		
 		return getService().create(t);

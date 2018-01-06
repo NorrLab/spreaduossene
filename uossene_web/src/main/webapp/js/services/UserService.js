@@ -1,18 +1,19 @@
-app.factory("UserService", function($location,$http) {
+app.factory("UserService", function($mdDialog,$location,$http,localStorageService) {
+	this.userMedias;
 	return{
-			isLogIn: function() {
-				return false;
+		
+			isLogIn: function(user) {
+				var currentUser = localStorageService.get("currentUser");
+				if(currentUser === null){
+					return false;
+				}
+				return true;
 			},
-			login: function(userEmail,userPassword) {
-				var user;
+			login: function(currentUser) {
+				var user = currentUser;
 				
-				var payLoad={
-						email: userEmail,//"uso@uos.com",
-						password:userPassword//"12345"
-				};
-				user = localStorageService.get("userLogin");
 				if(user!= undefined){
-					return  $http.post("UserServlet/Login",payLoad);
+					return  $http.post("http://localhost:8080/uossene_service/user/login",user);
 				}
 				 
 			},
@@ -22,6 +23,64 @@ app.factory("UserService", function($location,$http) {
 				}else{
 					return false;
 				}
+			},
+			getUserWithComment : function() {
+				return $http.get("http://localhost:8080/uossene_service/user/users/comments/");
+			},
+			createComment: function(user) {
+				if(this.isLogIn(user)){
+					this.callMdDialog();
+					return null;
+				}else{
+					return this.login(user);
+				}
+			},
+			accessMedia: function(user) {
+					if(this.isLogin(user)){
+						return $http.post("",user).then( function(response) {
+							this.userSetMedias(response.data);
+						});
+					}else{
+						var user
+						return $http.post("",user).then( function(response) {
+							this.userSetMedias(response.data);
+						});
+					}
+			},
+			userSetMedias: function(mediaList) {
+				this.userMedias = mediaList;
+			},
+			callMdDialog: function() {
+				$mdDialog.show({
+//    	            controller: UosCtrl,
+    	            templateUrl: 'partials/user/user_comment.html',
+    	            parent: angular.element(document.body),
+    	            clickOutsideToClose: true,
+    	            locals:{
+//    	            	logInForComment : logInForComment
+    	    		}
+    	        }).then(function () {
+    	            }
+    	        );
+			},
+			validateComment: function(message) {
+				var user =localStorageService.get("currentUser");
+				alert(user.commentId)
+				var comment = {
+						commentId:0,
+						dateComment: '',
+						userComment:message
+				}
+					user.userComment = comment;	
+				
+				
+		        return $http({
+		        	'url' : 'http://localhost:8080/uossene_service/user/comment/'+user.userId,
+			        'method' : 'POST',
+			        'headers': {'Content-Type' : 'application/json'},
+			        'data' : message
+		        });
+		        
 			}
 	}
 })

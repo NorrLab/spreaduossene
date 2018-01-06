@@ -14,7 +14,7 @@ import com.uossene.service.interfaces.MissionService;
 
 @RestController
 @RequestMapping(value="/mission")
-public class MissionRestControler extends GenericRestControler<Mission>{
+public class MissionRestController extends GenericRestController<Mission>{
 	
 	@Autowired
 	private MissionService missionService;
@@ -25,7 +25,7 @@ public class MissionRestControler extends GenericRestControler<Mission>{
 		return this.missionService;
 	}
 
-	public MissionRestControler() 
+	public MissionRestController() 
 	{
 		
 	}
@@ -38,11 +38,11 @@ public class MissionRestControler extends GenericRestControler<Mission>{
 	}
 	
 	@RequestMapping(value="/saerch-mission/{keyWords}")
-	public List<Mission> getMissionsByTechnologyKeyWord(@PathVariable String keyWord)
+	public List<Mission> getMissionsByTechnologyKeyWord(@PathVariable String keyWords)
 	{	
-		String[] keyWords = keyWord.split(",");
+		String[] keyWord = keyWords.split(",");
 		
-		return missionService.getMissionsByTechnologyKeyWord(keyWords);
+		return missionService.getMissionsByTechnologyKeyWord(keyWord);
 		
 	}
 	
