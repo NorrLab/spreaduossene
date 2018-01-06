@@ -659,10 +659,19 @@ img:focus {
  
  .comment_class p{
 /* 	 line-height: 16px; */
+<<<<<<< HEAD
     font-size:13px
  }
  
   .comment_class{
     padding: 9px;
+=======
+    font-size: 12px
+ }
+ 
+  .comment_class{
+    padding: 9px;
+    font-size: 12px
+>>>>>>> branch 'web_branch' of https://github.com/NorrLab/spreaduossene.git
  }
  
