@@ -601,6 +601,7 @@ app.controller("UosCtrl",["localStorageService","$scope","message","$location","
 	init();
 }])
 
+
 document.querySelector( "#nav-toggle" )
 	  .addEventListener( "click", function() {
 	    this.classList.toggle( "active" );

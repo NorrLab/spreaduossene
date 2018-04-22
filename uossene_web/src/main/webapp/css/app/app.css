@@ -123,7 +123,7 @@ img: hover{
     position: relative;
     z-index: 2;
     font-size: 20px;
-    min-height: 30px;
+    min-height: 35px;
     width: 100%;
     background: #92d7b2;
     text-align: center;
@@ -648,13 +648,12 @@ img:focus {
   outline: none;
     border: 0;
  }
- 
  .button_comment{
  	background: #92d7b2;;
  }
  
  .div_button_comment{
- 	margin: 40px;
+ 	margin:30px;
  }
  
  .comment_class p{
@@ -666,4 +665,81 @@ img:focus {
     padding: 9px;
     font-size: 12px
  }
+ 
+ .class_hebdo{
+ 	background-color: rgb(248, 51, 113);
+	height: 35px
+ }
+ 
+ .dfx-home-calendar-title {
+    font-size: 14px;
+    padding: 2px 0 0 15px;
+    margin-top: 18px;
+}
+
+/* .dfx-panel-title { */
+/*     font-weight: 800; */
+/*     text-transform: uppercase; */
+/*     font-size: 20px; */
+/*     padding-bottom: 1px; */
+/*     color: #4b5566; */
+/*     letter-spacing: 1px; */
+/*     line-height: 24px; */
+/*     margin-top: 31px; */
+/* } */
+
+.dfx-panel-title {
+    font-weight: 800;
+    text-transform: uppercase;
+    /* font-size: 20px; */
+    /* padding-bottom: 1px; */
+    color: #4b5566;
+    letter-spacing: 1px;
+    line-height: 24px;
+    /* margin-top: 31px; */
+}
+
+
+
+
+.dfx-table-widget-head {
+    border-top: 1px solid #ddd;
+}
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+table {
+    max-width: 100%;
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.md-card-image{
+	width: 100%;
+	padding: 3px
+}
+.uos_news{
+	padding:3px;
+	background: #F9F9F9;
+	height: 250px;
+	cursor: pointer;
+}
+.uos_news > h5{
+	
+/* 	padding: 9px */
+}
+
+.md-list-item-text{
+	background: #fff;
+	padding: 6px;
+	font-size: 16px;
+     line-height: 1.428571429;
+     rgba(0,0,0,0.87);
+     font-family: Arial,Lato,"Helvetica Neue",Helvetica,sans-serif;
+}
  

@@ -1164,6 +1164,7 @@ md-card {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12)
 }
 
+
 md-card,md-card md-card-header {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3318,7 +3319,7 @@ md-input-container.md-icon-left.md-icon-right>label .md-placeholder,md-input-con
 
 md-list {
     display: block;
-    padding: 8px 0
+/*     padding: 8px 0 */
 }
 
 md-list .md-subheader {
@@ -3709,7 +3710,7 @@ md-list-item.md-2-line .md-list-item-text,md-list-item.md-2-line>.md-no-style .m
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
-    margin: auto;
+/*     margin: auto; */
     text-overflow: ellipsis;
     overflow: hidden
 }
@@ -7997,7 +7998,7 @@ md-toolbar~md-content>md-list md-list-item:last-child md-divider {
 }
 
 .layout-column>.flex-10 {
-    max-width: 100%;
+    max-width: 31%;
     max-height: 10%
 }
 
@@ -20773,3 +20774,8 @@ md-toolbar~md-content>md-list md-list-item:last-child md-divider {
         display: none!important
     }
 }
+ 
+.last-item {
+	background: url('../../img/looking_forwards.png')
+}
+

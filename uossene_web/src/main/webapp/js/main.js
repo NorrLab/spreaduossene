@@ -1,4 +1,4 @@
-var app = angular.module("uosApp", ["pascalprecht.translate","ngRoute","ui-notification","ngMaterial","ngAnimate","services","ui.tree","LocalStorageModule"],["SERVICES","COMPONENTS","DEMOS","PAGES","$routeProvider","$locationProvider","$mdThemingProvider","$mdIconProvider", function(e,t,a,n,o,l,i,s) {
+var app = angular.module("uosApp", ["jkAngularCarousel","pascalprecht.translate","ngRoute","ui-notification","ngMaterial","ngAnimate","services","ui.tree","LocalStorageModule"],["SERVICES","COMPONENTS","DEMOS","PAGES","$routeProvider","$locationProvider","$mdThemingProvider","$mdIconProvider", function(e,t,a,n,o,l,i,s) {
 	
 }]);
 app.config(['$routeProvider', function($routeProvider) {
@@ -29,6 +29,12 @@ app.config(['$routeProvider', function($routeProvider) {
     });
 	$routeProvider.otherwise({
         redirectTo: '/home',
+        controller: 'UosCtrl'
+    });
+    
+    $routeProvider.otherwise({
+        redirectTo: '/test',
+        templateUrl:'partials/test-carousel.html',
         controller: 'UosCtrl'
     });
 	

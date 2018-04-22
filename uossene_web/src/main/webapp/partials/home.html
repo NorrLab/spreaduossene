@@ -1,7 +1,7 @@
-
-    		<div layout="row" class=" main_container">
-    		<div  flex="70">		
-  					<md-card class="main_row">
+<div class="container">
+			    <div layout="row" class="layout-row">
+					<div layout="column" flex="70" class="layout-column flex-70">
+				    	<md-card class="main_row">
 						  <img ng-click="gotoMyCv(true)"  ng-src="img/uossen_him.PNG" class=" main__md__img" alt="Washed Out">
 						  <md-card-title ng-click="gotoMyCv(true)" class="tx__card__title">
 						    <md-card-title-text>
@@ -14,151 +14,140 @@
 					    	</p>
 						  </md-card-content>
 					</md-card>
-				</div>
-				<div flex="30">
-					<md-card  class="main_row">
-						<div class="user_opinions">
-							<span style="color: #000" translate>comments.avis</span>
-							
-<!-- 						<span><img src="img/svg/icons8-speech-bubble.svg"/></span> -->
+					<div  layout="row" class="layout-row">
+			       		<md-card ng-repeat="0 in [0,1]" flex="50" class="uos_news _md flex-50">
+					        <img id="img_news" ng-src="img/sncf_infra.jpg" class="md-card-image" alt="Washed Out" src="app/img/trump_davos.jpg">
+			       			<h5><b>SNCF&nbsp;|&nbsp;Clermont-Ferrand</b></h5>
+			       			<p>
+					           ical language: feel it. It's a simple request, as well...
+					        </p>
+			       		</md-card>
+			       </div>
+			       <div  layout="row" class="layout-row">
+			       		<md-card ng-repeat="0 in [0,1]" flex="50" class="uos_news _md flex-50" ng-class="{'last-item': $last}">
+					        <img id="img_news" ng-src="img/coe.png" class="md-card-image" alt="Washed Out" src="app/img/trump_davos.jpg">
+			       			<h5><b>SNCF&nbsp;|&nbsp;trump à Davos</b></h5>
+			       			<p>
+					           ical language: feel it. It's a simple request, as well...
+					        </p>
+			       		</md-card>
+			       		
+			       </div>
+			       <div>
+				       <md-card style="height:290px" class="_md">
+						<div  layout="row" layout-align="center center" class="class_hebdo trading-section layout-align-center-center layout-row">
+			       			Mes pvisions hebdomadires
+			       		</div>
+				       </md-card>
+			       </div>
+				    </div>
+			      <div flex="30" class="flex-30">
+				      <div class="left_side">
+						<div style="margin: 6px" class="left_user_opinions">
+							<div class="user_opinions">
+								<span style="color: #000" translate="">comments.avis</span> 
+							</div>
+							<div  class="class_hebdo_list_sub"></div>
+								<div ng-repeat="0 in [0,1,2] "  class="class_hebdo_list layout-row">
+									<md-list flex="" role="list" class="flex">
+										<md-list-item class="md-3-line md-no-proxy _md" role="listitem">
+								          <div class="md-list-item-text layout-column" layout="row" style="width: 100%">
+							             	<div flex="10">
+<!-- 							             	{{user.userPictureUrl}} -->
+							             	<img ng-src="img/admin.png" class="md-avatar" alt="{{todos[0].who}}" />
+							             		<h4>Jack Emile</h4>
+							             		<h4>Coe EmilJck</h4>
+							             	</div>
+							             	<div flex="90" class="user_cmt">
+								             	<h6 layout="row" layout-align="end center"> 28/01/2018&nbsp;-&nbsp;Cin�ma</h6>
+								            	<h5 style="text-align: justify;"> La langue portugaise n�a pas �t� compl�tement oubli�e du jury Nobel, puisqu�il a couronn� Jos� Saramago</h5>
+								          	</div>
+								          </div>
+								        </md-list-item>
+								        <md-divider></md-divider>
+									</md-list>	
+								</div>
+								
+								<div layout="row" id="div_button_comment" class="div_button_comment" layout-align="center center" >
+									<md-button class="button_comment"  ng-click="haveAccess(true)">
+										commenter
+									</md-button>
+								</div> 
 						</div>
-						<md-card-content class="user_opinions_inner">
-							<md-list flex> 
-							        <md-list-item ng-repeat="user in userAndCommented" class="md-3-line  md-long-text md-long-opinion">
-							          <div flex="25" >
-							          	<div>
-							          		<img ng-src="{{user.userPictureUrl}}" class="md-avatar" alt="{{todos[0].who}}" />
-						          		</div>	
-							          	<div class="colleagues_opinions" >	
-							          		<h6 >{{user.userFirstName}} {{user.userLastName}}, {{user.userCompany}}</h6>
-						          		</div>
-						          	  </div>
-		<div flex="75" class=" comment_class">
-			<p>
-				<b>{{user.userComment.userComment.substring(0, 1)}}</b>{{user.userComment.userComment.substring(1,
-				user.userComment.userComment.length)}}
-			</p>
-		</div>
-		<md-divider ></md-divider>
-							        </md-list-item>
-		      				</md-list>
-						</md-card-content>
-						
-					</md-card>
-					<div layout="row" id="div_button_comment" class="div_button_comment" layout-align="center center" >
-						<md-button class="button_comment"  ng-click="haveAccess(true)">
-							commenter
-						</md-button>
-					</div>
-				</div>
-			</div>
-			
-			<div layout="row">
-				<div  flex="45" ng-repeat="job in missions">
-					<md-card ng-click="getDetailMission(job.missionId)" id="the_mission" class=" main__md__job">
-						<img ng-src="{{job.company.companyPictureUrl}}" class=" main__md__img__job" alt="Washed Out">
-<!-- 						<img ng-src="img/sncf_infra.jpg" class=" main__md__img__job" alt="Washed Out"> -->
-						<md-card-content>
-							<md-card-title>
-							    <md-card-title-text>
-							    	<span  class="md-headline"><b >{{job.missionGrade}}</b> - ( {{job.missionDuration}} ) </span><!-- (<span class="md-headline" translate>missions.sncf.duration</span>) -->
-<!-- 							      <span  class="md-headline"><b translate>missions.sncf.post</b> - 2014 (<span class="md-headline" translate>missions.sncf.duration</span>)</span> -->
-							    </md-card-title-text>
-						  	</md-card-title>
-							<p style="text-align: justify;">
-								{{job.missionIntro}}
-							</p>
-							 
-						</md-card-content>
-<!-- 						{{mission | json}} -->
-					</md-card>
-				</div>
-<!-- 				<div flex="45"> -->
-<!-- 					<md-card ng-click="getDetailMission(2)"  class=" main__md__job"> -->
-<!-- 					<img ng-src="img/grpe-open.png" class=" main__md__img__job  " alt="Washed Out"> -->
-<!-- 						<md-card-content> -->
-<!-- 							<md-card-title> -->
-<!-- 							    <md-card-title-text> -->
-<!-- 							      <span class="md-headline"><b translate>missions.open.post</b> - 2016<br> (<span class="md-headline" translate>missions.open.duration</span>)</span> -->
-<!-- 							    </md-card-title-text> -->
-<!-- 						  	</md-card-title> -->
-<!-- 							<p> -->
-<!-- 								<b>D</b>ans un groupe de 4 stagiaires, j'ai d&eacute;velopp&eacute; une applcation de gestion -->
-<!-- 								des collaborateurs OPEN. -->
-<!-- 							</p> -->
-<!-- 							<br> -->
-<!-- 							<p> -->
-<!-- 								Lors de ce stage j'ai donc pu me familiariser avec le <b>SGBD Postgres </b>, des frameworks tels que <b>Spring</b>, <b>Hibernate</b> pour ce qui est du d&eacute;veloppement  -->
-<!-- 								de la couche m&eacute;tier et le framework <b>angular 2</b> pour l'interface utilisateur. -->
-<!-- 							</p> -->
-<!-- 						</md-card-content> -->
-						
-<!-- 					</md-card> -->
-<!-- 				</div> -->
-<!-- 				<div flex="45"> -->
-<!-- 					<md-card  ng-click="getDetailMission(3)" class=" main__md__job"> -->
-<!-- 					<img ng-src="img/abw.jpeg" class=" main__md__img__job" alt="Washed Out"> -->
-<!-- 						<md-card-content> -->
-<!-- 							<md-card-title> -->
-<!-- 							    <md-card-title-text> -->
-<!-- 							      <span class="md-headline"><b translate>missions.abw.post</b> - 2016 (<span class="md-headline" translate>missions.abw.duration</span>)</span> -->
-<!-- 							    </md-card-title-text> -->
-<!-- 						  	</md-card-title> -->
-<!-- 							<p style="color: black" translate> -->
-<!-- 								missions.abw.description1 -->
-<!-- 							</p> -->
-<!-- 							<p> -->
-<!-- 								<span style="color: black"  translate>missions.abw.description2</span> -->
-<!-- 								<b>SonarQube</b>, <span style="color: black" translate>missions.abw.description3</span> <b>Play 2</b>, <b>angular 1.5.5</b>.<span style="color: black" translate>missions.abw.description4</span> <b>Postgres</b>. -->
-<!-- 							</p> -->
-<!-- 						</md-card-content> -->
-						
-<!-- 					</md-card> -->
-<!-- 				</div> -->
-<!-- 				<div  flex="45"> -->
-<!-- 					<md-card   ng-click="goToCoe()" class=" main__md__job"> -->
-<!-- 					<img ng-src="img/coe.png" class=" main__md__img__job" alt="Washed Out"> -->
-<!-- 						<md-card-content> -->
-<!-- 							<md-card-title> -->
-<!-- 							    <md-card-title-text> -->
-<!-- 							      <span class="md-headline"><b translate>missions.coe.post</b> - 2017 (<span class="md-headline" translate>missions.coe.duration</span>)</span> -->
-<!-- 							    </md-card-title-text> -->
-<!-- 						  	</md-card-title> -->
-<!-- 							<div class="current_mission"> -->
-<!-- 								<img alt="" ng-src="img/stop.png" > -->
-<!-- 							</div> -->
-<!-- 							</md-card-content> -->
-						
-<!-- 					</md-card> -->
-<!-- 				</div> -->
-			</div>
-			<div layout="row" style="padding: 6px">
-			
-				<md-card  class=" main__md__job__2">
-					<div class="user_opinions">
-								NUMERIC NEWS
-					</div>
-					<div layout="row" class="uos_new" style="padding: 18px">
-						<div flex="25">
-							<a>Elon Musk le patron de tesla et spacex, veut relier Paris &agrave; New-Yourk 
-							en moin d'une heure.</a>
-						</div>
-						<div flex="25">
-						<a>
-						En salliant &agrave; siemens, 
-						le groupe Alstom cherche un second soufffle dans le num&eacute;rique.
-						</a>
-						</div>
-						<div flex="25">
-						<a>
-							Les montre connect&eacute;es envahissement nos rues.
-						</a>
-						</div>
-						<div flex="25">
-						<a>
-							Une application pour aider les personnes des campagne &agrave; mieux &eacute;couler leurs produits en Afrique.
-						</a>
+				      </div>
+			      	<div class="left_side">
+						<div>
+							<div layout="row">
+<!-- 								<div style="width: 100%" class="banner first" data-bo-type="em" data-bo-nid="4C8687F5-5B7D-460A-93A0-DF3EBC65AEC1"> -->
+<!-- 								    <div class="slider-rfi-auto-ad"> -->
+<!-- 									    <ul style="width: 100%;" class="slides autopromo-mask"> -->
+<!-- 									        <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: block; z-index: 1;"> -->
+<!-- 												<img style="height:103px;width: 100%"  ng-src="img/frederick_doug.jpg" class="md-card-image" alt="Washed Out" src="img/frederick_doug.jpg"> -->
+<!-- 									        </li>        -->
+<!-- 									    </ul> -->
+<!-- 										<ol class="flex-control-nav flex-control-paging"> -->
+<!-- 											<li><a class="">1</a></li> -->
+<!-- 											<li><a class="flex-active">2</a></li> -->
+<!-- 											<li><a class="">3</a></li> -->
+<!-- 											<li><a class="">4</a></li> -->
+<!-- 										</ol> -->
+<!-- 									</div> -->
+
+									
+									<md-card layout="column" layout-align="center center" style="padding-bottom: 10px" >
+									  <h3>AutoSlide Carousel</h3>
+									  <jk-carousel
+									    data="dataArray"
+									    item-template-url="'item-template.html'"
+									    max-width="800" 
+									    max-height="500"
+									    auto-slide="true"
+									    auto-slide-time="2000" >
+									    </jk-carousel>
+									</md-card>
+								</div>
+							</div>
 						</div>
 					</div>
-				</md-card>
-			</div>
+					<div class="left_side">
+						<div style="background:#fff; padding: 0px; border: 1px solid #ddd; margin: 20px 0 20px;">
+						    <h3 class="dfx-panel-title dfx-home-calendar-title"><a href="/francais/calendrier_economique?ref=EconCalendarWidget" data-ref="EconCalendarWidget">Calendrier économique Forex</a></h3>
+						    <div style="padding: 10px 15px; margin: 13px 0 0; border-top: 1px solid #e1e6e9;">
+						        <table class="table dfx-table-widget-head" style="border-top: none; margin: -10px 0 15px 0;">
+						            <tbody class="home-cal-tbody" id="calendarwidget">
+										<tr ng-repeat="0 in [0,1,2]">
+											<td style="padding-left: 0px;">
+												<div class="flag-20-eur"></div>
+											</td>
+											<td class="eco-widget-date"><span>20 avr. à 16:00 CEST</span><br>EUR - Confiance des consommateurs de la zone euro&nbsp;(AVRIL A)
+											</td>
+											<td style="padding-right: 9px;"><span class="label label-sm label-medium-sm text-capitalize">M</span>
+											</td>
+											<td class="eco-widget-af">
+												<div>A:&nbsp;<span class="up-color">0.4%</span></div>
+												<div>C:&nbsp;<span class="neutral-color">-0.1</span></div>
+												<div>P:&nbsp;<span class="neutral-color">0.1</span></div>
+											</td>
+										</tr>
+										
+									</tbody>
+						        </table>
+						        <div style="text-align: right; font-size: 11px; color: #94999c; margin: -7px 0 24px;">
+						            A:&nbsp;
+						            Actuel&nbsp;&nbsp;
+						            C:&nbsp;
+						            Prévisions&nbsp;&nbsp;&nbsp;&nbsp;
+						            P:&nbsp;
+						            Précédent</div>
+						    </div>
+						</div>
+					
+					</div>
+			      </div>
+				</div>
+			    <div> </div>
+			    
+			    <div> &nbsp;</div>
+				 <div> &nbsp;</div>			    
+				 <div> &nbsp;</div>							    
+		    </div>
