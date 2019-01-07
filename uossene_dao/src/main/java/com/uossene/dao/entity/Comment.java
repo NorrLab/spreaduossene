@@ -64,5 +64,5 @@ public class Comment implements Serializable{
 	}
 	
 	
-	
+	//just a comment
 }
