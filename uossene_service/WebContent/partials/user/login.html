@@ -1,0 +1,29 @@
+<md-dialog class="md-dialog-login"  aria-label="Function change dialog" ng-cloak flex="65">
+   <div class="dialog-header ">
+            <h2 translate>page.login.login</h2>
+            
+    </div>
+    <div class="login" >
+       	<div flex="100" class="login" layout="row" >
+       		<md-input-container class="md-block" flex-gt-sm>
+	            <label>email</label>
+	            <input id="email" ng-model="user.email" autocomplete="off" >
+	          </md-input-container>
+       	</div><br>
+       	<div flex="100"  class="login" layout="row">
+       		 <md-input-container class="md-block" flex-gt-sm>
+	            <label>password</label>
+	            <input id="password" type="password" ng-model="user.password" autocomplete="off" >
+	          </md-input-container>
+<!--        		<input ng-model="password" placeholder="password" type="password"> -->
+    	</div><br>	
+    	<div flex="100"  class="login" layout="row">
+    		<h6 ><span  style="color: #000" translate>page.login.getAccount</span>&nbsp;|&nbsp; 
+    			<b class="account_creation" ng-click="register()" ><span class="account_creation" translate>page.login.accountCreate</span></b>
+    		</h6> 
+    	</div>
+    </div>
+	<md-button class=validate_dialog ng-click="login()">
+		<span translate>page.login.validate</span>
+	</md-button>
+</md-dialog>

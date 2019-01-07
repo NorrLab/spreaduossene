@@ -1,0 +1,145 @@
+<div class=" main_container">
+		<div layout="row"  >
+			<md-card class="main_row_formation" flex="100">
+				<div class="user_opinions">
+					<h2 translate>page.job_experiences</h2>
+				</div>
+				<md-card-content >
+					<md-list > 
+					        <md-list-item ng-click="goToTnS()" class="md-3-line  md-long-text">
+							<md-card-title-media>
+					            <div class="md-media-lg card-media">
+					            	<img ng-src="img/t&s.jpg"  alt="{{todos[0].who}}" />
+					            </div>
+					         </md-card-title-media>
+					          <div  class="md-list-item-text list_tns">
+					            <h3>&nbsp;&nbsp;
+					              11/07/2016 <b translate>page.myCv.tns</b> - Strasbourg
+				              	</h3> 
+					          </div>
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					        <md-list-item ng-click="goToOpen()" class="md-3-line md-long-text" >
+						        <md-card-title-media>
+						            <div class="md-media-lg card-media">
+						            	<img ng-src="img/grpe-open.png"  alt="{{todos[0].who}}" />
+						            </div>
+						         </md-card-title-media>
+						          <div class="md-list-item-text">
+						            <h3>&nbsp;&nbsp;{{ todos[0].who }}</h3>
+						            <h3>&nbsp;&nbsp;
+						            	11/01/2016 - 11/02/2016 <b translate>page.myCv.open</b> - Strasbourg 
+					            	</h3>
+						          </div>
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					        <md-list-item ng-click="goToSncf()" class="md-3-line md-long-text">
+					        <md-card-title-media>
+					            <div class="md-media-lg card-media">
+					            	<img ng-src="img/sncf_infra.jpg"  alt="{{todos[0].who}}" />
+					            </div>
+					         </md-card-title-media>
+					          <div class="md-list-item-text">
+					            <h3>&nbsp;&nbsp;{{ todos[1].who }}</h3>
+					            <h3>&nbsp;&nbsp;
+					                01/04/2014 - 12/31/2014 <b>ASSISTANT OUVRAGE D'ART</b> - Clermont-Ferrand
+				                </h3>
+					          </div>
+					        </md-list-item>
+	     				</md-list>
+				</md-card-content>
+				
+			</md-card>
+		</div>
+		<div layout="row" >
+			<md-card  class="main_row_formation" flex="100">
+				<div class="user_opinions">
+					<h2 translate>page.study_experiences</h2>
+				</div>
+				<md-card-content >
+					<md-list > 
+					        <md-list-item ng-click="goToAston()" class="md-3-line  md-long-text">
+						        <md-card-title-media>
+						            <div class="md-media-lg card-media">
+						            	<img class="cv_img" ng-src="img/aston.png"  alt="{{todos[0].who}}" />
+						            </div>
+						         </md-card-title-media>
+						          <div  class="md-list-item-text">
+						            <h3>&nbsp;&nbsp;
+						              2015 - <b translate>page.myCv.open</b> - Aston l'&eacute;cole informatique
+						              </h3> 
+						          </div>
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					        <md-list-item ng-click="goToUniVal()" class="md-3-line md-long-text">
+					        <md-card-title-media>
+					            <div class="md-media-lg card-media">
+					            	<img class="cv_img" ng-src="img/UNIV.png"  alt="{{todos[0].who}}" />
+					            </div>
+					         </md-card-title-media>
+					          <div class="md-list-item-text">
+					            <h3>&nbsp;&nbsp;{{ todos[0].who }}</h3>
+					            <h3>&nbsp;&nbsp;
+					            	2014 -  <b translate>page.myCv.study.uvch1</b> - <span style="color: #000" translate>page.myCv.study.city.uvch</span> 
+					            </h3>
+					          </div>
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					        <md-list-item ng-click="goToUniVal()" class="md-3-line md-long-text">
+					          <md-card-title-media >
+					            <div class="md-media-lg card-media">
+					            	<img class="cv_img" ng-src="img/UNIV.png"  alt="{{todos[0].who}}" />
+					            </div>
+					         </md-card-title-media>
+					          <div class="md-list-item-text" >
+					            <h3>&nbsp;&nbsp;
+					               2012 - <b translate>page.myCv.study.uvch2</b> - <span style="color: #000" translate>page.myCv.study.city.uvch</span> 
+				              	</h3>
+					          </div>
+					        </md-list-item>
+					        <md-divider ></md-divider>
+					         <md-list-item ng-click="goToUniVal()" class="md-3-line md-long-text">
+					          <md-card-title-media>
+					            <div class="md-media-lg card-media">
+					            	<img class="cv_img" ng-src="img/UNIV.png"  alt="{{todos[0].who}}" />
+					            </div>
+					         </md-card-title-media>
+					          <div class="md-list-item-text">
+					            <h3>&nbsp;&nbsp;{{ todos[1].who }}</h3>
+					            <h3>&nbsp;&nbsp;
+					               2011 - <b translate>page.myCv.study.uvch3</b> -  <span style="color: #000" translate>page.myCv.study.city.uvch</span> 
+				              	</h3>
+					          </div>
+					        </md-list-item>
+					        <md-list-item ng-click="goToWroclaw()"class="md-3-line md-long-text">
+					          <md-card-title-media>
+					            <div class="md-media-lg card-media">
+					            	<img class="cv_img" ng-src="img/20px-Wroclaw_University_of_Technology_logo.jpg"  alt="{{todos[0].who}}" />
+					            </div>
+					         </md-card-title-media>
+					          <div class="md-list-item-text">
+					            <h3>&nbsp;&nbsp;{{ todos[1].who }}</h3>
+					            <h3>&nbsp;&nbsp;
+					               2007 - <b translate>page.myCv.study.wroclaw</b> - <span style="color: #000" translate>page.myCv.study.city.wroclaw</span> 
+				              	</h3>
+					          </div>
+					        </md-list-item>
+					        <md-list-item ng-click="goToWroclaw()"class="md-3-line md-long-text">
+					          <md-card-title-media>
+					            <div class="md-media-lg card-media">
+					            	<img class="cv_img" ng-src="img/lyceejho.jpg"  alt="{{todos[0].who}}" />
+					            </div>
+					         </md-card-title-media>
+					          <div class="md-list-item-text">
+					            <h3>&nbsp;&nbsp;{{ todos[1].who }}</h3>
+					            <h3>&nbsp;&nbsp;
+					               2004 - <b translate>page.myCv.study.highSchool</b> - <span style="color: #000" translate>page.myCv.study.city.libreville</span> 
+				              	</h3>
+					          </div>
+					        </md-list-item>
+	     				</md-list>
+				</md-card-content>
+				
+			</md-card>
+		</div> 
+</div>

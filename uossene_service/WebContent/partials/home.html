@@ -1,0 +1,222 @@
+
+    		<div layout="row" class=" main_container">
+    		<div  flex="70">		
+  					<md-card class="main_row">
+						  <img ng-click="gotoMyCv(true)"  ng-src="img/uossen_him.PNG" class=" main__md__img" alt="Washed Out">
+						  <md-card-title ng-click="gotoMyCv(true)" class="tx__card__title">
+						    <md-card-title-text>
+						      <span class="__ossene" ><b>Ulrich OSSENE,</b><span span class="__ossene" translate>comments.uosTitle</span></span>
+						    </md-card-title-text>
+						  </md-card-title>
+						  <md-card-content ng-click="gotoMyCv(true)" >
+						    <p class="little_presentation" translate>
+					    		comments.uosComments
+					    	</p>
+						  </md-card-content>
+					</md-card>
+				</div>
+				<div flex="30">
+					<md-card  class="main_row">
+						<div class="user_opinions">
+							<span style="color: #000" translate>comments.avis</span>
+							
+<!-- 						<span><img src="img/svg/icons8-speech-bubble.svg"/></span> -->
+						</div>
+						<md-card-content class="user_opinions_inner">
+							<md-list flex> 
+							        <md-list-item class="md-3-line  md-long-text md-long-opinion">
+							          <div flex="25" >
+							          	<div>
+							          		<img ng-src="img/jenn.jpg" class="md-avatar" alt="{{todos[0].who}}" />
+						          		</div>	
+							          	<div class="colleagues_opinions" >		
+							          		<h6 >Alice Meja, SNCF</h6>
+						          		</div>
+						          	  </div>
+							          <div flex="75"  class="md-list-item-text">
+							            <p>
+							              <b>Ulrich OSSENE</b> est une personne tr&egrave;s cr&eacute;ative, 
+							              pleine d'&eacute;nergie avec qui il fait bon de tavailler.
+							              </p>
+							          </div>
+							        </md-list-item>
+							        <md-divider ></md-divider>
+							        <md-list-item class="md-3-line md-long-text md-long-opinion">
+								  	 <div flex="25" >
+									  	 <div>
+									  	 	<img ng-src="img/kamit.jpg" class="md-avatar" alt="{{todos[0].who}}" />
+									  	 </div>
+									  	 <div class="colleagues_opinions">
+									  	 	<h6>Paul Marie Gualt Meja, T&S</h6>
+							  	 		</div>
+								  	 </div>
+							          <div flex="75" class="md-list-item-text">
+							            <h3>{{ todos[0].who }}</h3>
+							            <p>
+							            	J'ai travaill&eacute; avec <b>Ulrich</b> sur un projet Java JEE, 
+							            	ce mec est une boule &eacute;nerg&eacute;tique  </p>
+							          </div>
+							        </md-list-item>
+							        <md-divider ></md-divider>
+							        <md-list-item class="md-3-line md-long-text md-long-opinion">
+							          <div flex="25">
+							          	<div>	
+							          		<img ng-src="img/hamell.jpg" class="md-avatar" alt="{{todos[0].who}}" />
+							          	</div>
+									  	 <div class="colleagues_opinions">
+									  	 	<h6>Jack Gruntter, COE</h6>
+							  	 		</div>
+							          </div>
+							          <div flex="75" class="md-list-item-text">
+							            <h3>{{ todos[1].who }}</h3>
+							            <p>
+							              J'ai connu <b>Ulrich</b> &agrave; la fac, depuis on est rest&eacute; de bons amis, la pens&eacute;e positive c'est lui 
+							              qui me l'a apprise.  
+						              	</p>
+							          </div>
+							        </md-list-item>
+				       			  <md-divider ></md-divider>	
+							        <md-list-item class="md-3-line md-long-text md-long-opinion">
+							          <div flex="25">
+							          	<div>	
+							          		<img ng-src="img/hamell.jpg" class="md-avatar" alt="{{todos[0].who}}" />
+							          	</div>
+									  	 <div class="colleagues_opinions">
+									  	 	<h6>Jack Gruntter, COE</h6>
+							  	 		</div>
+							          </div>
+							          <div flex="75" class="md-list-item-text">
+							            <h3>{{ todos[1].who }}</h3>
+							            <p>
+							              J'ai connu <b>Ulrich</b> &agrave; la fac, depuis on est rest&eacute; de bons amis, la pens&eacute;e positive c'est lui 
+							              qui me l'a apprise.  
+						              	</p>
+							          </div>
+							        </md-list-item>
+							       
+								
+		      				</md-list>
+						</md-card-content>
+						
+					</md-card>
+				</div>
+			</div>
+			
+			<div layout="row">
+				<div  flex="45">
+					<md-card ng-click="getDetailMission(1)" id="the_mission" class=" main__md__job">
+					<img ng-src="img/sncf_infra.jpg" class=" main__md__img__job" alt="Washed Out">
+						<md-card-content>
+							<md-card-title>
+							    <md-card-title-text>
+							      <span  class="md-headline"><b translate>missions.sncf.post</b> - 2014 (<span class="md-headline" translate>missions.sncf.duration</span>)</span>
+							    </md-card-title-text>
+						  	</md-card-title>
+							<p><b>A</b>u sein d'une &eacute;quipe de 6 personnes, j'avais en charge la mise en place d'un syst&egrave;me
+							de t&eacute;l&eacute;surveillance des lignes de chemins de fer.</p>
+							<br>
+							<p>
+							Le syst&egrave;me est donc un logiciel autonome d&eacute;velopp&eacute; en Java avec le framework 
+							<b>SWING</b>, le SGDB utilis&eacute; <b>MySQL</b> m'a permis de mieux g&eacute;rer l'ensemble de donn&eacute;es de l'application.
+							</p>
+							 
+						</md-card-content>
+						
+					</md-card>
+				</div>
+				<div flex="45">
+					<md-card ng-click="getDetailMission(2)"  class=" main__md__job">
+					<img ng-src="img/grpe-open.png" class=" main__md__img__job  " alt="Washed Out">
+						<md-card-content>
+							<md-card-title>
+							    <md-card-title-text>
+							      <span class="md-headline"><b translate>missions.open.post</b> - 2016<br> (<span class="md-headline" translate>missions.open.duration</span>)</span>
+							    </md-card-title-text>
+						  	</md-card-title>
+							<p>
+								<b>D</b>ans un groupe de 4 stagiaires, j'ai d&eacute;velopp&eacute; une applcation de gestion
+								des collaborateurs OPEN.
+							</p>
+							<br>
+							<p>
+								Lors de ce stage j'ai donc pu me familiariser avec le <b>SGBD Postgres </b>, des frameworks tels que <b>Spring</b>, <b>Hibernate</b> pour ce qui est du d&eacute;veloppement 
+								de la couche m&eacute;tier et le framework <b>angular 2</b> pour l'interface utilisateur.
+							</p>
+						</md-card-content>
+						
+					</md-card>
+				</div>
+				<div flex="45">
+					<md-card  ng-click="getDetailMission(3)" class=" main__md__job">
+					<img ng-src="img/abw.jpeg" class=" main__md__img__job" alt="Washed Out">
+						<md-card-content>
+							<md-card-title>
+							    <md-card-title-text>
+							      <span class="md-headline"><b translate>missions.abw.post</b> - 2016 (<span class="md-headline" translate>missions.abw.duration</span>)</span>
+							    </md-card-title-text>
+						  	</md-card-title>
+							<p style="color: black" translate>
+								missions.abw.description1
+							</p>
+							<p>
+								<span style="color: black"  translate>missions.abw.description2</span>
+								<b>SonarQube</b>, <span style="color: black" translate>missions.abw.description3</span> <b>Play 2</b>, <b>angular 1.5.5</b>.<span style="color: black" translate>missions.abw.description4</span> <b>Postgres</b>.
+							</p>
+						</md-card-content>
+						
+					</md-card>
+				</div>
+				<div  flex="45">
+					<md-card   ng-click="goToCoe()" class=" main__md__job">
+					<img ng-src="img/coe.png" class=" main__md__img__job" alt="Washed Out">
+						<md-card-content>
+							<md-card-title>
+							    <md-card-title-text>
+							      <span class="md-headline"><b translate>missions.coe.post</b> - 2017 (<span class="md-headline" translate>missions.coe.duration</span>)</span>
+							    </md-card-title-text>
+						  	</md-card-title>
+<!-- 							<p><b>L</b>iferay est un portail  -->
+<!-- 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown  -->
+<!-- 							printer took a galley of type and scrambled  -->
+<!-- 							</p> -->
+<!-- 							<br><p>it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,  -->
+<!-- 							remaining essentially unchanged.  -->
+<!-- 							</p> -->
+							<div class="current_mission">
+								<img alt="" ng-src="img/stop.png" >
+							</div>
+							</md-card-content>
+						
+					</md-card>
+				</div>
+			</div>
+			<div layout="row" style="padding: 6px">
+			
+				<md-card  class=" main__md__job__2">
+					<div class="user_opinions">
+								NUMERIC NEWS
+					</div>
+					<div layout="row" class="uos_new" style="padding: 18px">
+						<div flex="25">
+							<a>Elon Musk le patron de tesla et spacex, veut relier Paris &agrave; New-Yourk 
+							en moin d'une heure.</a>
+						</div>
+						<div flex="25">
+						<a>
+						En salliant &agrave; siemens, 
+						le groupe Alstom cherche un second soufffle dans le num&eacute;rique.
+						</a>
+						</div>
+						<div flex="25">
+						<a>
+							Les montre connect&eacute;es envahissement nos rues.
+						</a>
+						</div>
+						<div flex="25">
+						<a>
+							Une application pour aider les personnes des campagne &agrave; mieux &eacute;couler leurs produits en Afrique.
+						</a>
+						</div>
+					</div>
+				</md-card>
+			</div>

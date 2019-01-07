@@ -1,0 +1,35 @@
+
+
+<!-- Nested node template -->
+<script type="text/ng-template" id="nodes_renderer.html">
+  <div ui-tree-handle layout-align="start center" layout="row">
+	<div flex="100">
+    	{{node.title}} 
+	</div>
+  </div>
+  <ol ui-tree-nodes="" ng-model="node.nodes">
+    <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
+		{{node.title}
+    </li>
+  </ol>
+</script>
+<div class="main_container">
+	<md-card>
+		<header layout="row" layout-align="start center" style="background-color:#92d7b2;">
+			<div flex></div>
+			<h2>COMPETENCES</h2>
+			<div flex></div>
+<!-- 			<md-button class="md-icon-button tree-button"  ng-click="collapseAll(this)"> -->
+<!-- 				<md-icon md-svg-icon="img/svg/expand_less.svg"></md-icon> -->
+<!-- 			</md-button> -->
+<!-- 			<md-button class="md-icon-button tree-button"  ng-click="expandAll(this)"> -->
+<!-- 				<md-icon md-svg-icon="img/svg/expand_more.svg"></md-icon> -->
+<!-- 			</md-button> -->
+		</header>
+		<div ui-tree layout="row" style="padding: 9px">
+		  <ol ui-tree-nodes="" ng-model="competences" id="tree-root">
+		    <li ng-repeat="node in competences" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+		  </ol>
+		</div>
+	</md-card>
+</div>
