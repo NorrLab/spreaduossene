@@ -12,7 +12,7 @@ import javax.persistence.Transient;
 public class Company implements Serializable{
 	
 	/**
-	 * 
+	 * Keep on changing master branch
 	 */
 	private static final long serialVersionUID = 1L;
 	
