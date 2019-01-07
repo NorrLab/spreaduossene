@@ -7,7 +7,7 @@
 		
 		<class>com.uossene.dao.entity.Company</class>
 		<class>com.uossene.dao.entity.Mission</class>
-<!-- 		<class>com.uossene.dao.entity.Technology</class> -->
+		<class>com.uossene.dao.entity.Comment</class>
 <!-- 		<class>com.uossene.dao.entity.Movie</class> -->
 <!-- 		<class>com.uossene.dao.entity.Opera</class> -->
 <!-- 		<class>com.uossene.dao.entity.Page</class> -->
